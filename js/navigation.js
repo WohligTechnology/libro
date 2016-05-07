@@ -10,8 +10,29 @@ else {
 var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function() {
-  var navigation = [{
-    name: "Home",
+  var navigation = [
+    {
+    name: "pre plan your next holiday",
+    classis: "active",
+    anchor: "home"
+  },
+    {
+    name: "destinations & itineraries",
+    classis: "active",
+    anchor: "home"
+  },
+    {
+    name: "My Travel Diary",
+    classis: "active",
+    anchor: "home"
+  },
+    {
+    name: "Bookings",
+    classis: "active",
+    anchor: "home"
+  },
+    {
+    name: "travel agents",
     classis: "active",
     anchor: "home",
     subnav: [{
@@ -19,7 +40,13 @@ var navigationservice = angular.module('navigationservice', [])
       classis: "active",
       link: "#/home"
     }]
-  }];
+  },
+    {
+    name: "travel blogs",
+    classis: "active",
+    anchor: "home"
+  }
+];
 
   return {
     getnav: function() {

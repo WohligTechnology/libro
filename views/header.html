@@ -1,19 +1,46 @@
 <header>
-   <nav class="navbar navbar-default navbar-fixed-top">
+   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+            <button type="button" class="collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+                <span class="">MENU</span>
             </button>
-            <a class="navbar-brand" href="#/home"><img src="img/logo.png" alt="logo" width="20"> </a>
+            <h1><a class="" href="#/home"><img src="img/logo.png" alt="logo"></a></h1>
         </div>
-
-        <div class="collapse navbar-collapse" id="nav-collapse">
-               <div ng-include="template.menu" class="template menu"></div>
+        <div class="search">
+          <form action="" class="form-inline">
+            <div class="form-group">
+              <input type="text" placeholder="Search people, destinations, itineraries, agents and tags">
+              <button class="btn" typpe="submit">Go</button>
+            </div>
+          </form>
+        </div>
+        <div class="user-detail">
+          <ul>
+            <li>
+            <div class="profile">
+              <a href=""><img src="img/logo.png" alt="" class="img-responsive" width="32"></a>
+              <a href=""><span>Viraj</span></a>
+            </div>
+          </li>
+            <li>
+              <a href=""><img src="img/direction.png" alt="" class="img-responsive"></a>
+            </li>
+            <li>
+              <a href=""><img src="img/mail.png" alt="" class="img-responsive"></a>
+            </li>
+            <li>
+              <a href=""><img src="img/setting.png" alt="" class="img-responsive"></a>
+            </li>
+          </ul>
         </div>
     </div>
+</div>
+<nav>
+  <div class="container">
+    <div class="collapse navbar-collapse" id="nav-collapse">
+               <div ng-include="template.menu" class="template menu"></div>
+             </div>
+  </div>
 </nav>
 </header>
