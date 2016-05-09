@@ -1,9 +1,55 @@
 <div class="home-banner">
+  .
   <div class="container">
     <div class="book-tab">
       <uib-tabset>
         <uib-tab>
           <uib-tab-heading><i class="fa fa-"></i> Flights</uib-tab-heading>
+          <div class="booking-table">
+            <form action="">
+              <div class="row-flex">
+                <div class="col-flex">
+                  <div class="choose-destination">
+                    <label for="destination">Where would you like to stay ?</label>
+                    <textarea name="desctination" placeholder="Destination"></textarea>
+                  </div>
+                </div>
+                <div class="col-flex">
+                  <div class="check-in">
+                    <label for="checkin">Check in</label>
+                    <input type="text" class="form-control" id="checkin" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" / ng-click="open1()">
+                  </div>
+                  <div class="check-out">
+                    <label for="checkout">Check Out</label>
+                    <input type="text" class="form-control" id="checkout" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" / ng-click="open2()">
+                  </div>
+                </div>
+                <div class="col-flex">
+                  <div class="book-colum">
+                    <label for="rooms">Rooms</label>
+                    <select name="" id="rooms">
+                      <option value="">1</option>
+                    </select>
+                  </div>
+                  <div class="book-colum">
+                    <label for="adults">Adults</label>
+                    <select name="" id="adults">
+                      <option value="">1</option>
+                    </select>
+                  </div>
+                  <div class="book-colum">
+                    <label for="children">Children</label>
+                    <select name="" id="children">
+                      <option value=""></option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-flex">
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+              </div>
+            </form>
+          </div>
         </uib-tab>
         <uib-tab>
           <uib-tab-heading><i class="fa fa-"></i> Hotels</uib-tab-heading>
@@ -21,6 +67,73 @@
           <uib-tab-heading><i class="fa fa-"></i> Parking</uib-tab-heading>
         </uib-tab>
       </uib-tabset>
+    </div>
+  </div>
+</div>
+<div class="popular-destination">
+  <img src="img/popular-destination.png" alt="" class="img-responsive m-center text-center">
+  <div class="container">
+    <div class="popular-places">
+      <h3 class="place-heading">Europe</h3>
+      <div class="row-flex">
+        <div class="col-flex">
+          <div class="place">
+            <div class="place-imgholder"><img src="" alt="" class="img-responsive"></div>
+            <div class="place-detail"><span class="name"></span><span class="property"> properties</span></div>
+          </div>
+        </div>
+        <div class="col-flex">
+          <div class="place">
+            <div class="place-imgholder"><img src="" alt="" class="img-responsive"></div>
+            <div class="place-detail"><span class="name"></span><span class="property"> properties</span></div>
+          </div>
+        </div>
+        <div class="col-flex">
+          <div class="place">
+            <div class="place-imgholder"><img src="" alt="" class="img-responsive"></div>
+            <div class="place-detail"><span class="name"></span><span class="property"> properties</span></div>
+          </div>
+        </div>
+        <div class="col-flex">
+          <div class="place">
+            <div class="place-imgholder"><img src="" alt="" class="img-responsive"></div>
+            <div class="place-detail"><span class="name"></span><span class="property"> properties</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="placepopular-more">
+    <div class="container">
+      <div class="popular-places">
+        <h3 class="place-heading">Europe</h3>
+        <div class="row-flex">
+          <div class="col-flex">
+            <div class="place">
+              <div class="place-imgholder"><img src="" alt="" class="img-responsive"></div>
+              <div class="place-detail"><span class="name"></span><span class="property"> properties</span></div>
+            </div>
+          </div>
+          <div class="col-flex">
+            <div class="place">
+              <div class="place-imgholder"><img src="" alt="" class="img-responsive"></div>
+              <div class="place-detail"><span class="name"></span><span class="property"> properties</span></div>
+            </div>
+          </div>
+          <div class="col-flex">
+            <div class="place">
+              <div class="place-imgholder"><img src="" alt="" class="img-responsive"></div>
+              <div class="place-detail"><span class="name"></span><span class="property"> properties</span></div>
+            </div>
+          </div>
+          <div class="col-flex">
+            <div class="place">
+              <div class="place-imgholder"><img src="" alt="" class="img-responsive"></div>
+              <div class="place-detail"><span class="name"></span><span class="property"> properties</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
