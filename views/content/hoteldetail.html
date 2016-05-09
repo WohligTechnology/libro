@@ -4,25 +4,49 @@
     <form action="">
       <input type="text" name="city" placeholder="select your destination">
       <div class="calender">
-      <div ng-controller="DatepickerDemoCtrl">
-    <pre>Selected date is: <em>{{dt | date:'fullDate' }}</em></pre>
-
-    <h4>Inline</h4>
-    <div style="display:inline-block; min-height:290px;">
-      <uib-datepicker ng-model="dt" class="well well-sm" datepicker-options="options"></uib-datepicker>
+      <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" ng-click="open1()"/>
     </div>
     </div>
 </div>
 <div class="calender">
-<div ng-controller="DatepickerDemoCtrl">
-<pre>Selected date is: <em>{{dt | date:'fullDate' }}</em></pre>
-
-<h4>Inline</h4>
-<div style="display:inline-block; min-height:290px;">
-<uib-datepicker ng-model="dt" class="well well-sm" datepicker-options="options"></uib-datepicker>
+  <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" ng-click="open2()"/>
 </div>
 </div>
 </div>
+<div class="btn-group" uib-dropdown keyboard-nav>
+        <button id="simple-btn-keyboard-nav" type="button" class="btn btn-primary" uib-dropdown-toggle>people<span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="simple-btn-keyboard-nav">
+            <li role="menuitem"><a href="#">Action</a></li>
+            <li role="menuitem"><a href="#">Another action</a></li>
+            <li role="menuitem"><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li role="menuitem"><a href="#">Separated link</a></li>
+        </ul>
+    </div>
+    <div class="btn-group" uib-dropdown keyboard-nav>
+            <button id="simple-btn-keyboard-nav" type="button" class="btn btn-primary" uib-dropdown-toggle>people<span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="simple-btn-keyboard-nav">
+                <li role="menuitem"><a href="#">Action</a></li>
+                <li role="menuitem"><a href="#">Another action</a></li>
+                <li role="menuitem"><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li role="menuitem"><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+        <div class="btn-group" uib-dropdown keyboard-nav>
+                <button id="simple-btn-keyboard-nav" type="button" class="btn btn-primary" uib-dropdown-toggle>people<span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="simple-btn-keyboard-nav">
+                    <li role="menuitem"><a href="#">Action</a></li>
+                    <li role="menuitem"><a href="#">Another action</a></li>
+                    <li role="menuitem"><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li role="menuitem"><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+            <button type="button" class="btn btn-warning">Search</button>
     </form>
     </div>
 </div>
@@ -30,7 +54,7 @@
 <div class="container">
   <div class="details">
     <div class="col-flex">
-
+     <p>return to results</p>
     </div>
       </div>
       <div class="row">
@@ -50,8 +74,10 @@
           </div>
               <div class="hotel-inside">
                 <div class="inside-carousel">
-                <!--carousel-->
-                </div>
+                    <flexslider class="carousel" flex-slide="slide in slider" animation="slide" item="150">
+                      <li><img src="" alt="" class="img-responsive" ng-src="{{}}"></li>
+                    </flexslider>
+                  </div>
               </div>
               <div class="hotel-table">
                 <table>
@@ -64,10 +90,40 @@
                       <th>buttons of view</th>
                     </tr>
                   </thead>
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td>Best available rate</td>
+                      <td>1,004 GBP</td>
+                      <td>1,004 GBP</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>Best available rate</td>
+                      <td>1,004 GBP</td>
+                      <td>1,004 GBP</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>Best available rate</td>
+                      <td>1,004 GBP</td>
+                      <td>1,004 GBP</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>Best available rate</td>
+                      <td>1,004 GBP</td>
+                      <td>1,004 GBP</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
               <div class="customer-views">
-                <h3>sea views,location</h3>
+                <h3>“Sea views, Great location, Excellent service”</h3>
                 <p>Featuring an outdoor pool and a swimming pool, Trident Nariman Point is located in Mumbai and offers lively accommodation. It provides 5-star accommodation and views of the sea. </p>
                 <p>There are a variety of facilities on offer to guests of The Trident Nariman Point, including an express check-in and check-out feature, an executive floor and 24-hour room service. It offers babysitting services, a currency exchange and a reception that operates 24 hours a day.</p>
                 <p>Rooms at Trident Nariman Point are spacious and feature a mini bar and movies-on-demand. Each provide bottled water, a seating area and a private bathroom with a shower.</p>
