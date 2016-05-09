@@ -4,6 +4,7 @@
 @import "../bower_components/flexslider/flexslider.css";
 @import "../bower_components/font-awesome/css/font-awesome.min.css";
 @import "../bower_components/fancyBox/source/jquery.fancybox.css";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
 /* Bootstrap Variables Goes Here */
 $brand-primary: #0d9dff !default;
 $brand-success: #84ce3c !default;
@@ -33,7 +34,20 @@ nav li:hover .dropdown-menu {
 a {
   cursor: pointer;
   @include transition(all ease 300ms);
+  &:hover { text-decoration: none; }
 }
+.block { display: block; }
+.inline-block { display: inline-block; }
+.m-center { margin: 0px auto; }
+.m-clear { margin: 0; }
+.relate { position: relative; }
+.get-center {
+  @include position(absolute, 50% null null 50%);
+  @include transform(translate(-50%,-50%));
+}
+.font-light { font-weight: 300; }
+.font-medium { font-weight: 500; }
+.font-bold { font-weight: 700; }
 //bootstrap forms
 .input-lg,
 .input-group-lg > .form-control,
