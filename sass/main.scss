@@ -143,22 +143,44 @@ a {
   }
   .menu-down {
     padding: 0;
+    margin: 0;
     text-align: center;
       li {
-        padding-right: 30px;
+        padding: 12px 0;
+        margin-right: 35px;
         display: inline-block;
-        list-style-type: none;        
+        list-style-type: none;
         a {
           color: #adadad;
-          font-size: 13px;
-          &:hover { color: #000; }
+          font-size: 12px;
+          &:hover { color: #064362; }
+        }
+      }
+      li:last-child { margin-right: 0; }
+    }
+    .booking {
+      position: relative;
+      &:hover .submenu { display: block; }
+      .submenu {
+        width: 175px;
+        padding: 0 0 5px;
+        display: none;
+        @include position(absolute, 43px null null -50px);
+        background-color: #fff;
+        z-index: 9;
+        @include box-shadow(0 5px 5px -5px #333);
+        li {
+          padding: 4px 0px 8px;
+          margin: 0;
+          display: block;
+          font-size: 14px;
         }
       }
     }
-    .booking {
-      .submenu {
-        display: none;
-      }
-    }
-  nav { background-color: #f6f3f2; }
+  nav {
+    margin-top: 21px;
+    position: relative;
+    z-index: 10;
+    @include box-shadow(0 5px 5px -5px #333);
+  }
 // header end
