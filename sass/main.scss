@@ -8,9 +8,8 @@
 /* Bootstrap Variables Goes Here */
 $brand-blue: #2d85b6 !default;
 $brand-blue-dark: #174862 !default;
-$brand-orange: #f95e33 !default;
-$brand-danger: #fc483f !default;
-$brand-info: #000072 !default;
+$brand-blue-light: #f5fcff !default;
+$brand-orange: #f05023 !default;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @mixin placeholder {
   $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
@@ -48,6 +47,9 @@ a {
     @include transition(all ease 300ms);
   }
 }
+
+textarea { resize: none; }
+
 .pointer { cursor: pointer; }
 .block { display: block; }
 .inline-block { display: inline-block; }
@@ -58,6 +60,7 @@ a {
   @include position(absolute, 50% null null 50%);
   @include transform(translate(-50%,-50%));
 }
+.full-width { width: 100%; }
 .row-flex { @include display(flex); }
 .col-flex { @include flex(1); }
 .font-light { font-weight: 300; }
@@ -67,7 +70,10 @@ a {
 
 .bg-blue { background-color: $brand-blue; }
 .bg-blue-dark { background-color: $brand-blue-dark; }
+.bg-blue-light { background-color: $brand-blue-light; }
 .blue-dark { color: $brand-blue-dark }
+.color-blue { color: $brand-blue; }
+.color-orange { color: $brand-orange; }
 //bootstrap forms
 .input-lg,
 .input-group-lg > .form-control,
@@ -222,5 +228,62 @@ a {
       border-right: 15px solid transparent;
       @include position(absolute,-30px null null 10%);
     }
+  }
+
+  .book-your-ticket {
+    top: 40%;
+    left: 50%;
+    @include transform(translate(-50%,-40%));
+    z-index: 15;
+    .book-tab {
+      background: url('../img/booktable.png') no-repeat;
+      .nav-tabs {
+        background-color: #fff;
+        @include display(flex);
+      }
+      .nav > li {
+        @include flex(1);
+        text-align: center;
+      }
+      .nav-tabs > li > a {
+        border: none;
+        border-bottom: 4px solid transparent;
+        color: $brand-blue-dark;
+        &:hover {
+          border: none;
+          border-bottom: 4px solid $brand-orange;
+          background-color: transparent;
+        }
+      }
+      .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+        border: none;
+        border-bottom: 4px solid $brand-orange;
+        cursor: pointer;
+      }
+    }
+    .tab-content > .tab-pane { padding: 40px 30px; }
+    .book-colum {
+      min-height: 120px;
+      min-width: 104px;
+      padding: 10px;
+    }
+  }
+  .booking-table {
+    .col-flex { margin: 0px 7px; }
+  }
+  .choose-destination textarea {
+    @include size(300px,72px);
+    padding: 10px;
+    border: 1px solid #bbd9e9;
+    background-color: transparent;
+    @include placeholder {
+      color : #496e81;
+      font-size: 20px;
+    };
+  }
+  .btn-submit {
+    width: 120px;
+    background-color: #103c54;
+    &:focus { outline: none; }
   }
 // home page end
