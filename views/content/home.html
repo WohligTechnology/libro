@@ -85,6 +85,76 @@
           </uib-tab>
           <uib-tab>
             <uib-tab-heading><i class="fa fa-"></i> Hotels</uib-tab-heading>
+            <div class="booking-table">
+              <form action="">
+                <div class="row-flex">
+                  <div class="col-flex">
+                    <div class="choose-destination bg-blue-light book-colum">
+                      <label class="font-medium" for="destination">Where would you like to stay ?</label>
+                      <textarea name="desctination" placeholder="Destination"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-flex">
+                    <div class="row-flex">
+                      <div class="col-flex">
+                        <div class="check-in bg-blue-light book-colum">
+                          <label class="font-medium" for="checkin">Check in</label>
+                          <input type="text" class="form-control" id="checkin" ng-click="open1();" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" / >
+                        </div>
+                      </div>
+                      <div class="col-flex">
+                        <div class="check-out bg-blue-light book-colum">
+                          <label class="font-medium" for="checkout">Check Out</label>
+                          <input type="text" class="form-control" ng-click="open2();" uib-datepicker-popup="{{format}}" ng-model="dr" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-flex">
+                    <div class="row-flex">
+                      <div class="col-flex">
+                        <div class="book-colum bg-blue-light">
+                          <label class="font-medium block" for="rooms">Rooms</label>
+                          <select name="" id="rooms">
+                            <option value="">1</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-flex">
+                        <div class="book-colum bg-blue-light">
+                          <label class="font-medium block" for="adults">Adults</label>
+                          <select name="" id="adults">
+                            <option value="">1</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-flex">
+                        <div class="book-colum bg-blue-light">
+                          <label class="block font-medium" for="children">Children</label>
+                          <select name="" id="children">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                            <option value="">7</option>
+                            <option value="">8</option>
+                            <option value="">9</option>
+                            <option value="">10</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-flex">
+                    <div class="">
+                      <button type="submit" class="btn book-colum btn-submit"><i class="fa fa-search fa-3x color-orange"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
           </uib-tab>
           <uib-tab>
             <uib-tab-heading><i class="fa fa-"></i> Car Hire</uib-tab-heading>

@@ -10,6 +10,8 @@ $brand-blue: #2d85b6 !default;
 $brand-blue-dark: #174862 !default;
 $brand-blue-light: #f5fcff !default;
 $brand-orange: #f05023 !default;
+$brand-gray-dark: #636664 !default;
+$brand-gray-light: #d6d6d6 !default;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @mixin placeholder {
   $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
@@ -71,9 +73,15 @@ textarea { resize: none; }
 .bg-blue { background-color: $brand-blue; }
 .bg-blue-dark { background-color: $brand-blue-dark; }
 .bg-blue-light { background-color: $brand-blue-light; }
+.bg-gray-dark { background-color: $brand-gray-dark; }
+.bg-gray-light { background-color: $brand-gray-light; }
+.color-white { color: #fff; }
+
 .blue-dark { color: $brand-blue-dark }
 .color-blue { color: $brand-blue; }
 .color-orange { color: $brand-orange; }
+.gray-dark { color: $brand-gray-dark; }
+.gray-light { color: $brand-gray-light; }
 //bootstrap forms
 .input-lg,
 .input-group-lg > .form-control,
@@ -287,3 +295,30 @@ textarea { resize: none; }
     &:focus { outline: none; }
   }
 // home page end
+
+// footer
+
+  footer {
+    ul {
+      padding: 0;
+      li {
+        font-size: 12px;
+        list-style-type: none;
+        a:hover { color: $brand-gray-light; }
+      }
+    }
+  }
+  .social-links {
+    ul {
+      padding: 0;
+      li {
+        padding-left: 15px;
+        display: inline-block;
+        a {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+
+// footer end
