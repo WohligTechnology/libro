@@ -48,6 +48,7 @@ a {
     @include transition(all ease 300ms);
   }
 }
+.pointer { cursor: pointer; }
 .block { display: block; }
 .inline-block { display: inline-block; }
 .m-center { margin: 0px auto; }
@@ -64,7 +65,9 @@ a {
 .font-bold { font-weight: 700; }
 .v-mid { vertical-align: middle; }
 
+.bg-blue { background-color: $brand-blue; }
 .bg-blue-dark { background-color: $brand-blue-dark; }
+.blue-dark { color: $brand-blue-dark }
 //bootstrap forms
 .input-lg,
 .input-group-lg > .form-control,
@@ -86,6 +89,7 @@ a {
 
 // header
   .navbar-default {
+    border: none;
     padding: 20px 0;
     background: url('../img/header.png') no-repeat #174862 27% 0%;
   }
@@ -184,3 +188,39 @@ a {
     @include box-shadow(0 5px 5px -5px #333);
   }
 // header end
+// home page
+  .home-slider-back {
+    position: relative;
+    .flexslider {
+      border: none;
+      margin: 0;
+    }
+  }
+  .popular-places { margin: 30px 0; }
+  .place {
+    width: 280px;
+    margin: 10px 5px;
+    cursor: pointer;
+    .place-detail {
+      width: 100%;
+      padding: 5px;
+      @include position(absolute, null null 0 null);
+      background-color: rgba(255,255,255,0.9);
+      color: #064362;
+      .name { float: left; }
+      .property { float: right; }
+    }
+  }
+  .placepopular-more {
+    padding: 20px 0;
+    position: relative;
+    &:after {
+      content: "";
+      border-bottom: 15px solid $brand-blue;
+      border-left: 15px solid transparent;
+      border-top: 15px solid transparent;
+      border-right: 15px solid transparent;
+      @include position(absolute,-30px null null 10%);
+    }
+  }
+// home page end
