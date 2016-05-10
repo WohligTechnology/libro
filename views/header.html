@@ -1,26 +1,24 @@
 <header>
-   <div class="navbar navbar-default navbar-fixed-top">
+   <div class="navbar navbar-default navbar-fixed-top  clearfix">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
-                <span class="">MENU</span>
-            </button>
-            <h1><a class="" href="#/home"><img src="img/logo.png" alt="logo"></a></h1>
+            <a href="" class="inline-block v-mid"><span class="menu">Menu</span></a>
+            <h1 class="logo inline-block v-mid"><a class="" href="#/home"><img src="img/logo.png" alt="logo"></a></h1>
         </div>
-        <div class="search">
+        <div class="search inline-block">
           <form action="" class="form-inline">
             <div class="form-group">
-              <input type="text" placeholder="Search people, destinations, itineraries, agents and tags">
-              <button class="btn" typpe="submit">Go</button>
+              <input type="text" class="form-control head-search" placeholder="Search people, destinations, itineraries, agents and tags">
+              <button class="btn head-go" type="submit">GO</button>
             </div>
           </form>
         </div>
-        <div class="user-detail">
-          <ul>
+        <div class="user-detail pull-right">
+          <ul class="list-inline">
             <li>
-            <div class="profile">
-              <a href=""><img src="img/logo.png" alt="" class="img-responsive" width="32"></a>
-              <a href=""><span>Viraj</span></a>
+            <div class="profile inline-block">
+              <a href="" class="inline-block v-mid"><img src="img/profile.png" alt="" class="img-responsive" width="32"></a>
+              <a href="" class="inline-block v-mid"><span class="name">Viraj</span></a>
             </div>
           </li>
             <li>
@@ -38,9 +36,23 @@
 </div>
 <nav>
   <div class="container">
-    <div class="collapse navbar-collapse" id="nav-collapse">
-               <div ng-include="template.menu" class="template menu"></div>
-             </div>
+    <ul class="menu-down">
+      <li><a href="" class="text-uppercase">pre plan your next holiday</a></li>
+      <li><a href="" class="text-uppercase">destinations &amp; itineraries</a></li>
+      <li><a href="" class="text-uppercase">My Travel Diary</a></li>
+      <li class="booking"><a href="" class="text-uppercase">Bookings</a>
+        <ul class="submenu">
+          <li><a href="" class="text-uppercase">Flights</a></li>
+          <li><a href="" class="text-uppercase">Hotels</a></li>
+          <li><a href="" class="text-uppercase">Car Hire</a></li>
+          <li><a href="" class="text-uppercase">Home Stays</a></li>
+          <li><a href="" class="text-uppercase">Tours &amp; Excursions</a></li>
+          <li><a href="" class="text-uppercase">Parking Space</a></li>
+        </ul>
+      </li>
+      <li><a href="" class="text-uppercase">travel agents</a></li>
+      <li><a href="" class="text-uppercase">travel blogs</a></li>
+    </ul>
   </div>
 </nav>
 </header>
