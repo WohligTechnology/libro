@@ -1,6 +1,6 @@
 <div class="home-banner relate">
   <div class="home-slider-back">
-    <flex-slider class="carousel"  flex-slide="s in slider"  direction-nav="false" control-nav="false">
+    <flex-slider class="carousel" flex-slide="s in slider" direction-nav="false" control-nav="false">
       <li>
         <img ng-src="{{s}}" alt="" class="img-responsive">
       </li>
@@ -25,13 +25,14 @@
                     <div class="row-flex">
                       <div class="col-flex">
                         <div class="check-in bg-blue-light book-colum">
-                          <label class="font-medium" for="checkin">Check in</label>
-                          <input type="text" class="form-control" id="checkin" ng-click="open1();" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" / >
+                          <label class="font-medium" for="checkin"><img src="img/calendar.png" alt=""> Check in</label>
+                          <input type="text" class="form-control" id="checkin" ng-click="open1();" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats"
+                          />
                         </div>
                       </div>
                       <div class="col-flex">
                         <div class="check-out bg-blue-light book-colum">
-                          <label class="font-medium" for="checkout">Check Out</label>
+                          <label class="font-medium" for="checkout"><img src="img/calendar.png" alt=""> Check Out</label>
                           <input type="text" class="form-control" ng-click="open2();" uib-datepicker-popup="{{format}}" ng-model="dr" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
                         </div>
                       </div>
@@ -41,7 +42,7 @@
                     <div class="row-flex">
                       <div class="col-flex">
                         <div class="book-colum bg-blue-light">
-                          <label class="font-medium block" for="rooms">Rooms</label>
+                          <label class="font-medium block" for="rooms"><img src="img/bed.png" alt=""> Rooms</label>
                           <select name="" id="rooms">
                             <option value="">1</option>
                           </select>
@@ -49,15 +50,18 @@
                       </div>
                       <div class="col-flex">
                         <div class="book-colum bg-blue-light">
-                          <label class="font-medium block" for="adults">Adults</label>
-                          <select name="" id="adults">
-                            <option value="">1</option>
+                          <label class="font-medium block" for="adults"><img src="img/couple.png" alt=""> Adults</label>
+                          <select class="">
+                            <option value="1" >1</option>
+                            <option value="2" >2</option>
+                            <option value="3" >3</option>
+                            <option value="4" >4</option>
                           </select>
                         </div>
                       </div>
                       <div class="col-flex">
                         <div class="book-colum bg-blue-light">
-                          <label class="block font-medium" for="children">Children</label>
+                          <label class="block font-medium" for="children"><img src="img/single.png" alt=""> Children</label>
                           <select name="" id="children">
                             <option value="">1</option>
                             <option value="">2</option>
@@ -98,13 +102,14 @@
                     <div class="row-flex">
                       <div class="col-flex">
                         <div class="check-in bg-blue-light book-colum">
-                          <label class="font-medium" for="checkin">Check in</label>
-                          <input type="text" class="form-control" id="checkin" ng-click="open1();" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" / >
+                          <label class="font-medium" for="checkin"><img src="img/calendar.png" alt=""> Check in</label>
+                          <input type="text" class="form-control" id="checkin" ng-click="open1();" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats"
+                          />
                         </div>
                       </div>
                       <div class="col-flex">
                         <div class="check-out bg-blue-light book-colum">
-                          <label class="font-medium" for="checkout">Check Out</label>
+                          <label class="font-medium" for="checkout"><img src="img/calendar.png" alt=""> Check Out</label>
                           <input type="text" class="form-control" ng-click="open2();" uib-datepicker-popup="{{format}}" ng-model="dr" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
                         </div>
                       </div>
@@ -114,7 +119,7 @@
                     <div class="row-flex">
                       <div class="col-flex">
                         <div class="book-colum bg-blue-light">
-                          <label class="font-medium block" for="rooms">Rooms</label>
+                          <label class="font-medium block" for="rooms"><img src="img/bed.png" alt=""> Rooms</label>
                           <select name="" id="rooms">
                             <option value="">1</option>
                           </select>
@@ -122,15 +127,18 @@
                       </div>
                       <div class="col-flex">
                         <div class="book-colum bg-blue-light">
-                          <label class="font-medium block" for="adults">Adults</label>
-                          <select name="" id="adults">
-                            <option value="">1</option>
+                          <label class="font-medium block" for="adults"><img src="img/couple.png" alt=""> Adults</label>
+                          <select class="">
+                            <option value="1" >1</option>
+                            <option value="2" >2</option>
+                            <option value="3" >3</option>
+                            <option value="4" >4</option>
                           </select>
                         </div>
                       </div>
                       <div class="col-flex">
                         <div class="book-colum bg-blue-light">
-                          <label class="block font-medium" for="children">Children</label>
+                          <label class="block font-medium" for="children"><img src="img/single.png" alt=""> Children</label>
                           <select name="" id="children">
                             <option value="">1</option>
                             <option value="">2</option>
@@ -174,7 +182,7 @@
   </div>
 </div>
 <div class="popular-destination">
-  <img src="img/popular-destination.png" alt="" class="img-responsive m-center text-center">
+  <img src="img/popular-destination.png" alt="" class="img-responsive destn-tag text-center">
   <div class="container">
     <div class="popular-places">
       <h3 class="place-heading blue-dark">Europe</h3>

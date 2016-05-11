@@ -1,12 +1,101 @@
-
-<div class="panel">
+<div class="panel-booking">
   <div class="container">
     <div class="travel-info">
-
+      <form action="">
+        <div class="row-flex">
+          <div class="col-flex">
+            <input type="text" name="city" class="city form-control" placeholder="Select Your Destination">
+          </div>
+          <div class="col-flex">
+            <div class="calender">
+              <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" ng-click="open1()" />
+            </div>
+          </div>
+          <div class="col-flex">
+            <div class="calender">
+              <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" ng-click="open2()" />
+            </div>
+          </div>
+          <div class="col-flex">
+            <div class="number">
+              <label for="bed"><img src="img/bed.png" alt="bed"></label>
+              <select name="" id="bed">
+                <option value="1">1</option>
+                <option value="1">1</option>
+                <option value="1">1</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-flex">
+            <div class="number">
+              <label for="couple"><img src="img/couple.png" alt=""></label>
+              <select name="" id="couple">
+                <option value="1">1</option>
+                <option value="1">1</option>
+                <option value="1">1</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-flex">
+            <div class="number">
+              <label for="single"><img src="img/single.png" alt=""></label>
+              <select name="" id="single">
+                <option value="1">1</option>
+                <option value="1">1</option>
+                <option value="1">1</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-flex">
+            <button type="button" class="btn btn-warning">Search</button>
+          </div>
+        </div>
+      </form>
     </div>
-</div>
+  </div>
 </div>
 <div class="container">
+  <div class="hotel-detail">
+    <form action="">
+      <div class="row-flex">
+        <div class="col-flex">
+          <div class="range-slider">
+            <div range-slider min="demo2.range.min" max="demo2.range.max" model-min="demo2.minPrice" model-max="demo2.maxPrice" filter="currency:'₹'" step="100"></div>
+          </div>
+        </div>
+        <div class="col-flex">
+          <select name="" id="" class="text-uppercase">
+            <option value="" class="text-uppercase">Star rating</option>
+          </select>
+        </div>
+        <div class="col-flex">
+          <select name="" id="" class="text-uppercase">
+            <option value="" class="text-uppercase">accomodation</option>
+          </select>
+        </div>
+        <div class="col-flex">
+          <select name="" id="" class="text-uppercase">
+            <option value="" class="text-uppercase">guest reviews</option>
+          </select>
+        </div>
+        <div class="col-flex">
+          <select name="" id="" class="text-uppercase">
+            <option value="" class="text-uppercase">Area</option>
+          </select>
+        </div>
+        <div class="col-flex">
+          <select name="" id="" class="text-uppercase">
+            <option value="" class="text-uppercase">chain</option>
+          </select>
+        </div>
+        <div class="col-flex">
+          <select name="" id="" class="text-uppercase">
+            <option value="" class="text-uppercase">other filters</option>
+          </select>
+        </div>
+      </div>
+    </form>
+  </div>
 <div class="hotel-details">
   <div class="details">
     <div class="col-flex">
@@ -14,12 +103,12 @@
     </div>
       </div>
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-5">
      <div class="map">
-       <iframe src="https://www.google.co.in/maps/place/TraveLibro/@18.9708166,72.8110828,16z/data=!4m5!3m4!1s0x3be7ce7126566799:0x7efd7b6dc7dda4a8!8m2!3d18.9704296!4d72.8145482?hl=en"></iframe>
+       <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d120770.62297068757!2d72.75097704041977!3d18.927765664327545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3be7d1ef25d1fdc1%3A0xe3f924327fd9fdef!2strident+nariman+point+map!3m2!1d18.9277788!2d72.8210175!5e0!3m2!1sen!2sin!4v1462952622060" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
      </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-7">
       <div class="row">
         <div class="col-md-6">
           <p>Hotels Found:7</p>

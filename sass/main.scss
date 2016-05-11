@@ -3,6 +3,7 @@
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "../bower_components/flexslider/flexslider.css";
 @import "../bower_components/font-awesome/css/font-awesome.min.css";
+@import "../bower_components/angular-rangeslider/angular.rangeSlider.css";
 @import "../bower_components/fancyBox/source/jquery.fancybox.css";
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
 /* Bootstrap Variables Goes Here */
@@ -22,7 +23,6 @@ $brand-gray-light: #d6d6d6 !default;
   }
 }
 body {
-  padding-top: 70px;
   font-family: "Lato";
 }
 img.loading {
@@ -103,8 +103,9 @@ textarea { resize: none; }
 
 // header
   .navbar-default {
-    border: none;
     padding: 20px 0;
+    border: none;
+    margin: 0;
     background: url('../img/header.png') no-repeat #174862 27% 0%;
   }
   .head-search {
@@ -196,7 +197,7 @@ textarea { resize: none; }
       }
     }
   nav {
-    margin-top: 21px;
+    margin: 0;
     position: relative;
     z-index: 10;
     @include box-shadow(0 5px 5px -5px #333);
@@ -206,10 +207,13 @@ textarea { resize: none; }
   .home-slider-back {
     position: relative;
     .flexslider {
+      max-height: 760px;
       border: none;
       margin: 0;
+      overflow: hidden;
     }
   }
+  .destn-tag { margin: 30px auto ; }
   .popular-places { margin: 30px 0; }
   .place {
     width: 280px;
@@ -272,12 +276,13 @@ textarea { resize: none; }
     .tab-content > .tab-pane { padding: 40px 30px; }
     .book-colum {
       min-height: 120px;
-      min-width: 104px;
-      padding: 10px;
+      min-width: 110px;
+      padding: 7px;
+      label img { margin-right: 5px; }
     }
   }
   .booking-table {
-    .col-flex { margin: 0px 7px; }
+    .col-flex { margin: 0px 5px; }
   }
   .choose-destination textarea {
     @include size(300px,72px);
@@ -325,3 +330,15 @@ textarea { resize: none; }
   }
 
 // footer end
+
+// hotel
+  .panel-booking {
+    padding: 15px 0;
+    background: url('../img/panel.png') no-repeat;
+    .city {
+      width: 300px;
+    }
+    .form-control { height: 40px; }
+    .col-flex { margin-right: 20px; }
+  }
+// hotel end

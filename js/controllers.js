@@ -119,6 +119,22 @@ function getDayClass(data) {
   $scope.menutitle = NavigationService.makeactive("Hotel");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
+
+  $scope.demo2 = {
+      range: {
+          min: 100,
+          max: 10000,
+      },
+      minPrice: 1000,
+      maxPrice: 4000
+  };
+  // set available range
+  $scope.minPrice = 100;
+  $scope.maxPrice = 999;
+
+  // default the user's values to the available range
+  $scope.userMinPrice = $scope.minPrice;
+  $scope.userMaxPrice = $scope.maxPrice;
 })
 .controller('HoteldetailCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   //Used to name the .html file
