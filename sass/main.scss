@@ -5,6 +5,7 @@
 @import "../bower_components/font-awesome/css/font-awesome.min.css";
 @import "../bower_components/angular-rangeslider/angular.rangeSlider.css";
 @import "../bower_components/fancyBox/source/jquery.fancybox.css";
+@import "style.css";
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
 /* Bootstrap Variables Goes Here */
 $brand-blue: #2d85b6 !default;
@@ -136,6 +137,10 @@ textarea {
   margin-left: 10px;
 }
 .pad-zero { padding: 0; }
+.pt10 { padding-top: 10px; }
+.pr10 { padding-right: 10px; }
+.pb10 { padding-bottom: 10px; }
+.pl10 { padding-left: 10px; }
 .fz12 { font-size: 12px; }
 .fz13 { font-size: 13px; }
 // background
@@ -178,6 +183,9 @@ textarea {
 // btn
 .btn-blue {
   @include button-variant(white, $brand-blue, $brand-blue);
+}
+.btn-orange {
+  @include button-variant(white, $brand-orange, $brand-orange);
 }
 //bootstrap forms
 .input-lg,
@@ -255,6 +263,7 @@ textarea {
   margin-top: 10px;
   .list-inline > li {
     padding: 0 10px;
+    &:last-child { padding: 0 0 0 10px; }
   }
 }
 .profile {
@@ -394,6 +403,7 @@ nav {
       border: none;
       border-bottom: 4px solid $brand-orange;
       cursor: pointer;
+      i { color: $brand-orange }
     }
   }
   .tab-content > .tab-pane {
@@ -402,11 +412,45 @@ nav {
   .book-colum {
     min-height: 120px;
     min-width: 110px;
-    padding: 7px;
+    padding: 5px 7px;
     label img {
       margin-right: 5px;
     }
   }
+}
+.check-cal {
+  padding: 5px;
+  border: 1px solid #bbd9e9;
+  h3 { margin: 2px 0; }
+}
+.select-bar {
+  ul {
+    padding: 0;
+    width: 100%;
+    @include position(absolute, 82px null null null);
+    background-color: $brand-blue-light;
+    text-align: center;
+    li {
+      padding: 10px;
+      border-bottom: 1px solid #bbd9e9;
+      list-style-type: none;
+    }
+  }
+}
+.select-colum {
+  padding: 5px;
+  border: 1px solid #bbd9e9;
+  position: relative;
+  text-align: center;
+  &:after {
+    content: "";
+    border-top: 8px solid $brand-blue-dark;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid transparent;
+    @include position(absolute,48% null null 70%);
+  };
+  h3 { margin: 22px 0; }
 }
 .booking-table {
   .col-flex {
@@ -414,20 +458,39 @@ nav {
   }
 }
 .choose-destination textarea {
-  @include size(300px,72px);
+  @include size(300px,82px);
   padding: 10px;
   border: 1px solid #bbd9e9;
   background-color: transparent;
-  @include placeholder {
-    color: #496e81;
-    font-size: 20px;
-  };
+  color: #496e81;
+  font-size: 20px;
+  &:focus { outline: none; }
+  @include placeholder { color: #496e81 };
 }
 .btn-submit {
   width: 120px;
   background-color: #103c54;
   &:focus {
     outline: none;
+  }
+}
+.currency-country {
+  @include position(absolute, 75px 18px null null);
+  z-index: 11;
+  .bar {
+    padding: 5px 25px;
+    margin: 0 0 12px;
+    position: relative;
+    background-color: $brand-blue-dark;
+    color: #fff;
+    .icon {
+      @include square(35px);
+      border-radius: 100%;
+      @include position(absolute, -3px null null 60px);
+      background-color: $brand-orange;
+      line-height: 35px;
+      text-align: center;
+    }
   }
 }
 // home page end
@@ -468,24 +531,116 @@ footer {
   background: url('../img/panel.png') no-repeat;
   .city {
     width: 300px;
+    &:focus { border-color: #fff; }
   }
   .form-control {
     height: 40px;
   }
   .col-flex {
     margin-right: 20px;
+    &:last-child { margin-right: 0; }
   }
 }
+.travel-info {
+  .calender {
+    min-height: 40px;
+    padding: 9px;
+    background-color: #fff;
+    img { margin-right: 15px; }
+  }
+  .cal-select {
+    display: inline-block;
+    span { min-width: 35px; }
+    &:after {
+      content:"";
+      border-top: 5px solid $brand-blue-dark;
+      border-right: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 5px solid transparent;
+      @include position(absolute, 50% -35% null null);
+      @include transform(translate(35%,-50%));
+    }
+  }
+  .cal-dropdown {
+    padding: 0;
+    width: 100%;
+    @include position(absolute, 82px null null null);
+    background-color: #fff;
+    text-align: center;
+    li {
+      padding: 10px;
+      border-bottom: 1px solid #bbd9e9;
+      list-style-type: none;
+    }
+  }
+  .btn-search {
+    height: 40px;
+    padding: 10px 39px;
+  }
+}
+.hotel-book-detail {
+  padding: 5px 0;
+  margin-top: -1px;
+  background-color: #ece5d6;
+  .feature-dropdown {
+    padding: 10px 15px;
+    border-left: 1px solid #d3cdc1;
+    i { margin: 3px 0; }
+  }
+}
+.return-hotel-detail { padding: 15px; }
+.range-slider {
+  [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
+    display: block !important;
+    position: static;
+    padding: 0;
+  }
+  .ngrs-value-min  {
+    float: left;
+  }
+  .ngrs-value-max  {
+    float: right;
+  }
+  .ngrs-range-slider {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    top: 28px;
+    background-color: transparent;
+  }
+  .ngrs-range-slider .ngrs-attached-handles {
+    position: relative;
+    bottom: 40px;
+  }
+  .ngrs-range-slider .ngrs-attached-handles .ngrs-value > div {
+    margin: 0;
+    color: $brand-blue-dark;
+  }
+  .ngrs-range-slider .ngrs-handle {
+    @include square(12px);
+    border-radius: 100%;
+    background-color: $brand-blue-dark;
+  }
+  .ngrs-range-slider .ngrs-join {
+    height: 3px;
+    background-color: #d0c8b8;
+    background-image: none;
+  }
+}
+.hotel-information {
+  padding: 10px 14px 0 25px;
+}
 .hotel-details {
-  padding: 10px;
+  padding: 10px 14px 10px 10px;
 }
 .hotel-search {
   padding: 10px 0 0 10px;
   .list-inline > li {
     min-height: 34px;
-    padding: 0px 19px 10px;
+    padding: 0px 18px 10px;
     border-bottom: 2px solid #c5c5c5;
-    margin-left: -2px;
+    margin-left: -1px;
   }
   .list-inline > .tab-active { border-bottom: 2px solid $brand-orange; }
 }

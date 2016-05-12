@@ -1,4 +1,4 @@
-angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap','ngAnimate', 'ngSanitize', 'angular-flexslider'])
+angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap','ngAnimate', 'ui-rangeSlider' , 'ngSanitize', 'angular-flexslider'])
 
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   //Used to name the .html file
@@ -15,7 +15,37 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     'img/slider2.jpg',
     'img/slider3.jpg'
   ];
+  $scope.openSelect = function(){
+    $scope.childroom=false;
+    $scope.adultroom=false;
 
+    if($scope.showRooms === true){
+      $scope.showRooms=false;
+    }else{
+      $scope.showRooms=true;
+    }
+  };
+  $scope.openAdultsel = function(){
+    $scope.childroom=false;
+    $scope.showRooms=false;
+
+    if($scope.adultroom === true){
+      $scope.adultroom=false;
+    }else{
+      $scope.adultroom=true;
+    }
+  };
+  $scope.openChildsel = function(){
+    $scope.adultroom=false;
+    $scope.showRooms=false;
+
+    if($scope.childroom === true){
+      $scope.childroom=false;
+    }else{
+      $scope.childroom=true;
+    }
+  };
+  $scope.showRooms = false;
   $scope.today = function() {
   $scope.dt = new Date();
 };

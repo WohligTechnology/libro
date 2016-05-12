@@ -8,51 +8,80 @@
           </div>
           <div class="col-flex">
             <div class="calender">
-              <label for=""> <img src="img/calendar.png" alt="">
+              <img src="img/calendar.png" alt="">
+              <!-- <label for="" class="m-clear">
                 <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" ng-click="open1()" />
-              </label>
+              </label> -->
+              <div class="cal-select relate">
+                <span class="blue-dark">27 Jan</span>
+              </div>
             </div>
           </div>
           <div class="col-flex">
             <div class="calender">
-              <label for=""><img src="img/calendar-return.png" alt="">
+              <img src="img/calendar-return.png" alt="" class="">
+              <!-- <label for="" class="m-clear">
                 <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats"
                   ng-click="open2()" />
-              </label>
+              </label> -->
+              <div class="cal-select relate">
+                <span class="blue-dark">27 Jan</span>
+              </div>
             </div>
           </div>
           <div class="col-flex">
-            <div class="number">
-              <label for="bed"><img src="img/bed.png" alt="bed"></label>
+            <div class="calender">
+              <img src="img/bed.png" alt="bed">
+              <!-- <label for="bed"></label>
               <select name="" id="bed">
                 <option value="1">1</option>
                 <option value="1">1</option>
                 <option value="1">1</option>
-              </select>
+              </select> -->
+              <div class="cal-select relate">
+                <span class="color-orange inline-block text-center">1</span>
+                <!-- <ul class="cal-dropdown">
+                  <li><a href="">1</a></li>
+                  <li><a href="">2</a></li>
+                  <li><a href="">3</a></li>
+                  <li><a href="">4</a></li>
+                  <li><a href="">5</a></li>
+                </ul> -->
+              </div>
             </div>
           </div>
           <div class="col-flex">
-            <div class="number">
-              <label for="couple"><img src="img/couple.png" alt=""></label>
-              <select name="" id="couple">
-                <option value="1">1</option>
-                <option value="1">1</option>
-                <option value="1">1</option>
-              </select>
+            <div class="calender">
+              <img src="img/couple.png" alt="couple" height="22">
+              <div class="cal-select relate">
+                <span class="color-orange inline-block text-center">1</span>
+                <!-- <ul class="cal-dropdown">
+                  <li><a href="">1</a></li>
+                  <li><a href="">2</a></li>
+                  <li><a href="">3</a></li>
+                  <li><a href="">4</a></li>
+                  <li><a href="">5</a></li>
+                </ul> -->
+              </div>
             </div>
           </div>
           <div class="col-flex">
-            <div class="number">
-              <label for="single"><img src="img/single.png" alt=""></label>
-              <select name="" id="single">
-                <option value="1">1</option>
-                <option value="1">1</option>
-                <option value="1">1</option>
-              </select>
+            <div class="calender">
+              <img src="img/single.png" alt="couple">
+              <div class="cal-select relate">
+                <span class="color-orange inline-block text-center">1</span>
+                <!-- <ul class="cal-dropdown">
+                  <li><a href="">1</a></li>
+                  <li><a href="">2</a></li>
+                  <li><a href="">3</a></li>
+                  <li><a href="">4</a></li>
+                  <li><a href="">5</a></li>
+                </ul> -->
+              </div>
             </div>
           </div>
           <div class="col-flex">
-            <button type="button" class="btn btn-warning">Search</button>
+            <button type="button" class="btn btn-orange btn-search">Search</button>
           </div>
         </div>
       </form>
@@ -65,51 +94,52 @@
       <div class="row-flex">
         <div class="col-flex">
           <div class="range-slider">
-            <div range-slider min="demo2.range.min" max="demo2.range.max" model-min="demo2.minPrice" model-max="demo2.maxPrice" filter="currency:'₹'" step="100"></div>
+            <div range-slider min="demo2.range.min" max="demo2.range.max" model-min="demo2.minPrice" model-max="demo2.maxPrice" filter="currency:'₹'" step="100" attach-handle-values="true" ></div>
           </div>
         </div>
         <div class="col-flex">
-          <select name="" id="" class="text-uppercase">
-            <option value="" class="text-uppercase">Star rating</option>
-          </select>
+          <div class="feature-dropdown text-center">
+            <span class="inline-block text-uppercase blue-dark fz13">star rating</span>
+            <i class="fa fa-chevron-down pull-right blue-dark"></i>
+          </div>
         </div>
         <div class="col-flex">
-          <select name="" id="" class="text-uppercase">
-            <option value="" class="text-uppercase">accomodation</option>
-          </select>
+          <div class="feature-dropdown text-center">
+            <span class="inline-block text-uppercase blue-dark fz13">accomodation</span>
+            <i class="fa fa-chevron-down pull-right blue-dark"></i>
+          </div>
         </div>
         <div class="col-flex">
-          <select name="" id="" class="text-uppercase">
-            <option value="" class="text-uppercase">guest reviews</option>
-          </select>
+          <div class="feature-dropdown text-center">
+            <span class="inline-block text-uppercase blue-dark fz13">guest reviews</span>
+            <i class="fa fa-chevron-down pull-right blue-dark"></i>
+          </div>
         </div>
         <div class="col-flex">
-          <select name="" id="" class="text-uppercase">
-            <option value="" class="text-uppercase">Area</option>
-          </select>
+          <div class="feature-dropdown text-center">
+            <span class="inline-block text-uppercase blue-dark fz13">Area</span>
+            <i class="fa fa-chevron-down pull-right blue-dark"></i>
+          </div>
         </div>
         <div class="col-flex">
-          <select name="" id="" class="text-uppercase">
-            <option value="" class="text-uppercase">chain</option>
-          </select>
+          <div class="feature-dropdown text-center">
+            <span class="inline-block text-uppercase blue-dark fz13">chain</span>
+            <i class="fa fa-chevron-down pull-right blue-dark"></i>
+          </div>
         </div>
         <div class="col-flex">
-          <select name="" id="" class="text-uppercase">
-            <option value="" class="text-uppercase">other filters</option>
-          </select>
+          <div class="feature-dropdown text-center">
+            <span class="inline-block text-uppercase blue-dark fz13">other filters</span>
+            <i class="fa fa-chevron-down pull-right blue-dark"></i>
+          </div>
         </div>
       </div>
     </form>
   </div>
   <div class="hotel-details">
-    <div class="details">
-      <div class="col-flex">
-
-      </div>
-    </div>
     <div class="row">
       <div class="col-md-5 pad-zero">
-        <div class="map">
+        <div class="map pl10">
           <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d120770.62297068757!2d72.75097704041977!3d18.927765664327545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3be7d1ef25d1fdc1%3A0xe3f924327fd9fdef!2strident+nariman+point+map!3m2!1d18.9277788!2d72.8210175!5e0!3m2!1sen!2sin!4v1462952622060"
             width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
