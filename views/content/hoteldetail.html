@@ -61,148 +61,186 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-5 pad-zero">
       <div class="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d120770.62297068757!2d72.75097704041977!3d18.927765664327545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3be7d1ef25d1fdc1%3A0xe3f924327fd9fdef!2strident+nariman+point+map!3m2!1d18.9277788!2d72.8210175!5e0!3m2!1sen!2sin!4v1462952622060"
           width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
     </div>
-    <div class="col-md-6">
-      <div class="row">
-        <div class="col-md-6">
-          <h2>trident nariman hotel</h2>
-          <!--rating stars-->
-        </div>
-        <div class="col-md-6">
-          <span><i class="fa fa-heart-o" aria-hidden="true"></i></span>
-          <span>Superb 9.2</span>
-          <span>1,157 reviews</span>
-        </div>
-      </div>
-      <div class="hotel-inside">
-        <div class="inside-carousel">
-          <flexslider class="carousel" flex-slide="slide in slider" animation="slide" item="150">
-            <li><img src="" alt="" class="img-responsive" ng-src="{{}}"></li>
-          </flexslider>
-        </div>
-      </div>
-      <div class="hotel-table">
-        <table>
-          <thead>
-            <tr>
-              <th>booking sites</th>
-              <th>room</th>
-              <th>room per night</th>
-              <th>total for 5 nights</th>
-              <th>buttons of view</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td></td>
-              <td>Best available rate</td>
-              <td>1,004 GBP</td>
-              <td>1,004 GBP</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>Best available rate</td>
-              <td>1,004 GBP</td>
-              <td>1,004 GBP</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>Best available rate</td>
-              <td>1,004 GBP</td>
-              <td>1,004 GBP</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>Best available rate</td>
-              <td>1,004 GBP</td>
-              <td>1,004 GBP</td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="customer-views">
-        <h3>“Sea views, Great location, Excellent service”</h3>
-        <p>Featuring an outdoor pool and a swimming pool, Trident Nariman Point is located in Mumbai and offers lively accommodation. It provides 5-star accommodation and views of the sea. </p>
-        <p>There are a variety of facilities on offer to guests of The Trident Nariman Point, including an express check-in and check-out feature, an executive floor and 24-hour room service. It offers babysitting services, a currency exchange and a reception
-          that operates 24 hours a day.</p>
-        <p>Rooms at Trident Nariman Point are spacious and feature a mini bar and movies-on-demand. Each provide bottled water, a seating area and a private bathroom with a shower.</p>
-        <p>A satisfying breakfast is prepared every morning at Trident Hotel Nariman Point, and there are numerous cafés and eateries close by.</p>
-        <p>Mumbai's well-known attractions are within close proximity to Trident Hotel Nariman Point Mumbai, with Air India Building only a short walk away. The hotel also offers parking for those travelling by car.</p>
-      </div>
-      <div class="hotel-features">
-        <h3>hotel features</h3>
-        <ul class="list-inline">
-          <li><img src="img/wifi.png" class="img-responsive" alt="wifi">wifi</li>
-          <li><img src="img/parking.png" class="img-responsive" alt="parking">parking</li>
-          <li><img src="img/restaurant.png" class="img-responsive" alt="restaurant">restaurant</li>
-          <li><img src="img/gym.png" class="img-responsive" alt="gym">gym</li>
-          <li><img src="img/service.png" class="img-responsive" alt="room service">room service</li>
-        </ul>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="features">
-              <h3>activites</h3>
-              <p>Fitness Room/Gym, Tour Desk, Massage / Beauty Centre, Bath, Salon, Spa & Wellness Centre</p>
-            </div>
-            <div class="features">
-              <h3>check-in</h3>
-              <p>From 2:00 PM</p>
-            </div>
-            <div class="features">
-              <h3>check-out</h3>
-              <p>Prior to 12:00 PM</p>
-            </div>
-            <div class="features">
-              <h3>general</h3>
-              <p>Room Service, Restaurant, Bar / Lounge, Air Conditioned, Mini Bar, In Room Movies, Connecting Rooms, Hair Dryer, TV, Shower, En suite, Private Bathroom, Private Toilet, Coffee Shop/Cafeteria</p>
+    <div class="col-md-7 pad-zero">
+      <div class="scroll-hotel-part">
+        <div class="hotel-inside-scroll">
+          <div class="hoteldetail-inside">
+            <div class="hoteldetail-heading">
+              <div class="clearfix">
+                <div class="pull-left">
+                  <h3 class="color-orange text-capitalize m-clear mb10">trident nariman hotel</h3>
+                  <div class="rating">
+                    <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" state-on="'fa fa-star'" state-off="'fa fa-star-o'" aria-labelledby="default-rating"></uib-rating>
+                    <span class="blue-dark ml20">5.8 km to center</span>
+                  </div>
+                </div>
+                <div class="pull-right">
+                  <img src="img/heart.png" alt="" class="heart-heading block">
+                  <h4 class="color-orange m-clear mt5 mb5">Superb 9.2</h4>
+                  <span class="blue-dark">1,157 reviews</span>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="features">
-              <h3>internet</h3>
-              <p>Wireless internet on site.</p>
-            </div>
-            <div class="features">
-              <h3>parking</h3>
-              <p>Valet parking is offered at the hotel</p>
-            </div>
-            <div class="features">
-              <h3>services</h3>
-              <p>Business Center, Concierge, Elevator / Lift, 24-Hour Reception, Dry Cleaning, Babysitting / Child Services, Conference Room(s), Currency Exchange, Safe-Deposit Box, ATM / Cash Machine, Meeting Rooms, Laundry service, Shops, Photocopier,
-                Ticket Service, Executive Floor, Luggage Storage, Designated Smoking Area, Shops in Hotel, Express Check-In/Check-Out, Shoe Shine, Self Laundry</p>
+          <div class="hotelinside-slider">
+            <flex-slider class="carousel" flex-slide="slide in hotel track by $index" direction-nav="false" control-nav="false" animation="slide" item-width="460" item-margin="5">
+              <li><img alt="" class="img-responsive" ng-src="{{slide}}"></li>
+            </flex-slider>
+          </div>
+          <div class="hotel-table">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="color-orange font-bold">Booking sites</th>
+                  <th class="color-orange font-bold">Room</th>
+                  <th class="color-orange font-bold">Room per night</th>
+                  <th class="color-orange font-bold">Total for 5 nights</th>
+                  <th class="color-orange font-bold"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href=""><img src="img/hotelsbtn.png" alt="" class="img-responsive"></a></td>
+                  <td>
+                    <div class="">
+                    <span class="blue-dark block">Best available rate</span>
+                    <span class=""><img src="img/cup.png" alt="" class="v-top mr5">Breakfast included</span>
+                  </div>
+                </td>
+                  <td><span class="blue-dark">1,004 GBP</span></td>
+                  <td><span class="blue-dark">1,004 GBP</span></td>
+                  <td><button class="btn btn-blue">View deal</button></td>
+                </tr>
+                <tr>
+                  <td><a href=""><img src="img/hotelsbtn.png" alt="" class="img-responsive"></a></td>
+                  <td>
+                    <div class="">
+                    <span class="blue-dark block">Best available rate</span>
+                    <span class=""><img src="img/cup.png" alt="" class="v-top mr5">Breakfast included</span>
+                  </div>
+                </td>
+                  <td><span class="blue-dark">1,004 GBP</span></td>
+                  <td><span class="blue-dark">1,004 GBP</span></td>
+                  <td><button class="btn btn-blue">View deal</button></td>
+                </tr>
+                <tr>
+                  <td><a href=""><img src="img/hotelsbtn.png" alt="" class="img-responsive"></a></td>
+                  <td>
+                    <div class="">
+                    <span class="blue-dark block">Best available rate</span>
+                    <span class=""><img src="img/cup.png" alt="" class="v-top mr5">Breakfast included</span>
+                  </div>
+                </td>
+                  <td><span class="blue-dark">1,004 GBP</span></td>
+                  <td><span class="blue-dark">1,004 GBP</span></td>
+                  <td><button class="btn btn-blue">View deal</button></td>
+                </tr>
+                <tr>
+                  <td><a href=""><img src="img/hotelsbtn.png" alt="" class="img-responsive"></a></td>
+                  <td>
+                    <div class="">
+                    <span class="blue-dark block">Best available rate</span>
+                    <span class=""><img src="img/cup.png" alt="" class="v-top mr5">Breakfast included</span>
+                  </div>
+                </td>
+                  <td><span class="blue-dark">1,004 GBP</span></td>
+                  <td><span class="blue-dark">1,004 GBP</span></td>
+                  <td><button class="btn btn-blue">View deal</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="customer-views">
+          <div class="row">
+            <div class="col-md-offset-1 col-md-10">
+              <h4 class="blue-dark text-center font-bold mb20">“Sea views, Great location, Excellent service”</h4>
+              <p>Featuring an outdoor pool and a swimming pool, Trident Nariman Point is located in Mumbai and offers lively accommodation. It provides 5-star accommodation and views of the sea. </p>
+              <p>There are a variety of facilities on offer to guests of The Trident Nariman Point, including an express check-in and check-out feature, an executive floor and 24-hour room service. It offers babysitting services, a currency exchange and a reception
+                that operates 24 hours a day.</p>
+              <p>Rooms at Trident Nariman Point are spacious and feature a mini bar and movies-on-demand. Each provide bottled water, a seating area and a private bathroom with a shower.</p>
+              <p>A satisfying breakfast is prepared every morning at Trident Hotel Nariman Point, and there are numerous cafés and eateries close by.</p>
+              <p>Mumbai's well-known attractions are within close proximity to Trident Hotel Nariman Point Mumbai, with Air India Building only a short walk away. The hotel also offers parking for those travelling by car.</p>
             </div>
           </div>
         </div>
-      </div>
-      <div class="summary">
-        <h3>a summary of 1,157 guest views</h3>
-        <ul class="list-inline">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-        <div class="list">
+        <div class="hotel-features">
+          <h4 class="font-bold color-orange text-center mb20">Hotel Features</h4>
+          <ul class="list-inline hotel-deal mb20">
+            <li class="blue-dark"><img src="img/wifi.png" class="mr5" alt="wifi">Wifi</li>
+            <li class="blue-dark"><img src="img/parking.png" class="mr5" alt="parking">Parking</li>
+            <li class="blue-dark"><img src="img/restaurant.png" class="mr5" alt="restaurant">Restaurant</li>
+            <li class="blue-dark"><img src="img/gym.png" class="mr5" alt="gym">Gym</li>
+            <li class="blue-dark"><img src="img/service.png" class="mr5" alt="room service">Room service</li>
+          </ul>
           <div class="row">
             <div class="col-md-6">
-              <li>Stunning sea views </li>
-              <li>Convenient location</li>
-              <li>Guests thought the staff were professional and provided good service</li>
+              <div class="features">
+                <h5 class="color-orange font-bold ">Activites</h5>
+                <address class="fz13">Fitness Room/Gym, Tour Desk, Massage / Beauty Centre, Bath, Salon, Spa &amp; Wellness Centre</address>
+              </div>
+              <div class="features">
+                <h5 class="color-orange font-bold">Check-in</h5>
+                <p class="fz13">From 2:00 PM</p>
+              </div>
+              <div class="features">
+                <h5 class="color-orange font-bold">Check-out</h5>
+                <p class="fz13">Prior to 12:00 PM</p>
+              </div>
+              <div class="features">
+                <h5 class="color-orange font-bold">General</h5>
+                <p class="fz13">Room Service, Restaurant, Bar / Lounge, Air Conditioned, Mini Bar, In Room Movies, Connecting Rooms, Hair Dryer, TV, Shower, En suite, Private Bathroom, Private Toilet, Coffee Shop/Cafeteria</p>
+              </div>
             </div>
             <div class="col-md-6">
-              <li>Satisfying breakfast</li>
-              <li>Efficient check-in/check-out</li>
+              <div class="features">
+                <h5 class="font-bold color-orange">Internet</h5>
+                <p class="fz13">Wireless internet on site.</p>
+              </div>
+              <div class="features">
+                <h5 class="font-bold color-orange">Parking</h5>
+                <p class="fz13">Valet parking is offered at the hotel</p>
+              </div>
+              <div class="features">
+                <h5 class="font-bold color-orange">Services</h5>
+                <p class="fz13">Business Center, Concierge, Elevator / Lift, 24-Hour Reception, Dry Cleaning, Babysitting / Child Services, Conference Room(s), Currency Exchange, Safe-Deposit Box, ATM / Cash Machine, Meeting Rooms, Laundry service, Shops, Photocopier,
+                  Ticket Service, Executive Floor, Luggage Storage, Designated Smoking Area, Shops in Hotel, Express Check-In/Check-Out, Shoe Shine, Self Laundry</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="summary">
+          <h4 class="color-orange font-bold text-center mb20">A summary of 1,157 guest views</h4>
+          <!-- <ul class="list-inline">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul> -->
+          <img src="img/summary.png" alt="" class="chart img-responsive">
+          <div class="list">
+            <div class="row">
+              <div class="col-md-6">
+                <ul class="fz13 summary-list">
+                  <li>Stunning sea views </li>
+                  <li>Convenient location</li>
+                  <li>Guests thought the staff were professional and provided good service</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="fz13 summary-list">
+                  <li>Satisfying breakfast</li>
+                  <li>Efficient check-in/check-out</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

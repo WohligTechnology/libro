@@ -108,17 +108,31 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-5">
+      <div class="col-md-5 pad-zero">
         <div class="map">
           <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d120770.62297068757!2d72.75097704041977!3d18.927765664327545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3be7d1ef25d1fdc1%3A0xe3f924327fd9fdef!2strident+nariman+point+map!3m2!1d18.9277788!2d72.8210175!5e0!3m2!1sen!2sin!4v1462952622060"
             width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
       </div>
-      <div class="col-md-7">
+      <div class="col-md-7 pad-zero">
         <div class="hotel-search">
-
+          <div class="row">
+            <div class="col-md-4">
+              <span class="result blue-dark">Hotels Found : 7</span>
+            </div>
+            <div class="col-md-8">
+              <div class="result-tab">
+                <span class="sortby blue-dark font-bold">Sort by:</span>
+                <ul class="pad-zero list-inline inline-block m-clear">
+                    <li class="{{classa}}" ng-click="tabchange('popular',1)"><img src="img/popular.png" alt="" class="mr5">Popularity</li>
+                    <li class="{{classb}}" ng-click="tabchange('Guest',2)"><img src="img/guest.png" alt="" class="mr5">Guest Rating</li>
+                    <li class="{{classc}}" ng-click="tabchange('Price',3)"><img src="img/price.png" alt="" class="mr5">Price</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="scroll-hotel-part">
+        <div class="scroll-hotel-part" ng-if="tab2=='popular'">
           <div class="hotel-infos">
             <div class="hotels">
               <div class="row">
@@ -132,9 +146,9 @@
                 <div class="col-md-6">
                   <div class="hotel-info-detail">
                     <h4 class="color-orange text-capitalize">Trident nariman hotel</h4>
-                    <div class="stars">
-                      <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></uib-rating>
-                      <span>5.8 km to center</span>
+                    <div class="rating mb10">
+                      <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" state-on="'fa fa-star'" state-off="'fa fa-star-o'" aria-labelledby="default-rating"></uib-rating>
+                      <span class="blue-dark ml20">5.8 km to center</span>
                     </div>
                     <div class="hotel-rate">
                       <div class="clearfix mt5 mb5">
@@ -168,7 +182,7 @@
                           <strike class="blue-dark font-bold">858 GBP</strike>
                           <h4 class="mt5 mb5 color-orange font-bold">677 GBP</h4>
                           <span class="block">201 GBP per night</span>
-                          <button class="btn btn-blue view-deal mt10 mb10">View deal</button>
+                          <button class="btn btn-blue view-deal mt10 mb10" ui-sref="hoteldetail" >View deal</button>
                         </div>
                       </div>
                     </div>
@@ -188,9 +202,9 @@
                 <div class="col-md-6">
                   <div class="hotel-info-detail">
                     <h4 class="color-orange text-capitalize">Trident nariman hotel</h4>
-                    <div class="stars">
-                      <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></uib-rating>
-                      <span>5.8 km to center</span>
+                    <div class="rating mb10 mb10">
+                      <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" state-on="'fa fa-star'" state-off="'fa fa-star-o'" aria-labelledby="default-rating"></uib-rating>
+                      <span class="blue-dark ml20">5.8 km to center</span>
                     </div>
                     <div class="hotel-rate">
                       <div class="clearfix mt5 mb5">
@@ -224,7 +238,7 @@
                           <strike class="blue-dark font-bold">858 GBP</strike>
                           <h4 class="mt5 mb5 color-orange font-bold">677 GBP</h4>
                           <span class="block">201 GBP per night</span>
-                          <button class="btn btn-blue view-deal mt10 mb10">View deal</button>
+                          <button class="btn btn-blue view-deal mt10 mb10" ui-sref="hoteldetail" >View deal</button>
                         </div>
                       </div>
                     </div>
@@ -244,9 +258,9 @@
                 <div class="col-md-6">
                   <div class="hotel-info-detail">
                     <h4 class="color-orange text-capitalize">Trident nariman hotel</h4>
-                    <div class="stars">
-                      <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></uib-rating>
-                      <span>5.8 km to center</span>
+                    <div class="rating mb10">
+                      <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" state-on="'fa fa-star'" state-off="'fa fa-star-o'" aria-labelledby="default-rating"></uib-rating>
+                      <span class="blue-dark ml20">5.8 km to center</span>
                     </div>
                     <div class="hotel-rate">
                       <div class="clearfix mt5 mb5">
@@ -280,7 +294,7 @@
                           <strike class="blue-dark font-bold">858 GBP</strike>
                           <h4 class="mt5 mb5 color-orange font-bold">677 GBP</h4>
                           <span class="block">201 GBP per night</span>
-                          <button class="btn btn-blue view-deal mt10 mb10">View deal</button>
+                          <button class="btn btn-blue view-deal mt10 mb10" ui-sref="hoteldetail" >View deal</button>
                         </div>
                       </div>
                     </div>
@@ -300,9 +314,9 @@
                 <div class="col-md-6">
                   <div class="hotel-info-detail">
                     <h4 class="color-orange text-capitalize">Trident nariman hotel</h4>
-                    <div class="stars">
-                      <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></uib-rating>
-                      <span>5.8 km to center</span>
+                    <div class="rating mb10">
+                      <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" state-on="'fa fa-star'" state-off="'fa fa-star-o'" aria-labelledby="default-rating"></uib-rating>
+                      <span class="blue-dark ml20">5.8 km to center</span>
                     </div>
                     <div class="hotel-rate">
                       <div class="clearfix mt5 mb5">
@@ -336,7 +350,7 @@
                           <strike class="blue-dark font-bold">858 GBP</strike>
                           <h4 class="mt5 mb5 color-orange font-bold">677 GBP</h4>
                           <span class="block">201 GBP per night</span>
-                          <button class="btn btn-blue view-deal mt10 mb10">View deal</button>
+                          <button class="btn btn-blue view-deal mt10 mb10" ui-sref="hoteldetail" >View deal</button>
                         </div>
                       </div>
                     </div>
@@ -346,6 +360,8 @@
             </div>
           </div>
         </div>
+        <div class="" ng-if="tab2=='Guest'"></div>
+        <div class="" ng-if="tab2=='Price'"></div>
       </div>
     </div>
   </div>

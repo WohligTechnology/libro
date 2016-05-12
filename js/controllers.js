@@ -119,6 +119,30 @@ function getDayClass(data) {
   $scope.menutitle = NavigationService.makeactive("Hotel");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
+  $scope.tab2 = 'popular';
+  $scope.classa = 'tab-active';
+  $scope.classb = '';
+  $scope.classc = '';
+
+  $scope.tabchange = function(tab, a) {
+      $scope.tab2 = tab;
+      if (a == 1) {
+          $scope.classa = "tab-active";
+          $scope.classb = '';
+          $scope.classc = '';
+          $scope.classd = '';
+      } else if (a == 2) {
+          $scope.classa = '';
+          $scope.classb = "tab-active";
+          $scope.classc = '';
+          $scope.classd = '';
+      } else if (a == 3) {
+          $scope.classa = '';
+          $scope.classb = '';
+          $scope.classc = "tab-active";
+          $scope.classd = '';
+      }
+  };
 
   $scope.demo2 = {
       range: {
@@ -135,6 +159,23 @@ function getDayClass(data) {
   // default the user's values to the available range
   $scope.userMinPrice = $scope.minPrice;
   $scope.userMaxPrice = $scope.maxPrice;
+
+  $scope.rate = 0;
+  $scope.max = 5;
+  $scope.isReadonly = false;
+
+  $scope.hoveringOver = function(value) {
+   $scope.overStar = value;
+   $scope.percent = 100 * (value / $scope.max);
+ };
+
+ $scope.ratingStates = [
+   {stateOn: 'glyphicon-ok-sign', stateOff: 'glyphicon-ok-circle'},
+   {stateOn: 'fa-star', stateOff: 'fa-star-o'},
+   {stateOn: 'glyphicon-heart', stateOff: 'glyphicon-ban-circle'},
+   {stateOn: 'glyphicon-heart'},
+   {stateOff: 'glyphicon-off'}
+ ];
 })
 .controller('HoteldetailCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   //Used to name the .html file
@@ -145,6 +186,29 @@ function getDayClass(data) {
   $scope.menutitle = NavigationService.makeactive("Hotel Detail");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
+  $scope.hotel = [
+    'img/tr.jpg',
+    'img/tr.jpg',
+    'img/tr.jpg',
+    'img/tr.jpg',
+    'img/tr.jpg'
+  ];
+  $scope.rate = 0;
+  $scope.max = 5;
+  $scope.isReadonly = false;
+
+  $scope.hoveringOver = function(value) {
+   $scope.overStar = value;
+   $scope.percent = 100 * (value / $scope.max);
+ };
+
+ $scope.ratingStates = [
+   {stateOn: 'glyphicon-ok-sign', stateOff: 'glyphicon-ok-circle'},
+   {stateOn: 'fa-star', stateOff: 'fa-star-o'},
+   {stateOn: 'glyphicon-heart', stateOff: 'glyphicon-ban-circle'},
+   {stateOn: 'glyphicon-heart'},
+   {stateOff: 'glyphicon-off'}
+ ];
 })
 
 .controller('headerctrl', function($scope, TemplateService) {
