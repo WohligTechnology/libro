@@ -588,7 +588,9 @@ footer {
     i { margin: 3px 0; }
   }
 }
-.return-hotel-detail { padding: 15px; }
+.slider-imgholder {
+  height: 250px;
+}
 .range-slider {
   [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
     display: block !important;
@@ -690,7 +692,7 @@ footer {
   border-bottom: 1px solid #c8bfb0;
 }
 .hotel-inside-scroll {
-  height: 840px;
+  height: 677px;
   padding-right: 20px;
   overflow-x: hidden;
   overflow-y: scroll;

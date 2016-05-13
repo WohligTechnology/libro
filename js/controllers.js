@@ -217,11 +217,11 @@ function getDayClass(data) {
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
   $scope.hotel = [
-    'img/tr.jpg',
-    'img/tr.jpg',
-    'img/tr.jpg',
-    'img/tr.jpg',
-    'img/tr.jpg'
+    'img/hotelslider.jpg',
+    'img/hotelslider.jpg',
+    'img/hotelslider.jpg',
+    'img/hotelslider.jpg',
+    'img/hotelslider.jpg'
   ];
   $scope.rate = 0;
   $scope.max = 5;

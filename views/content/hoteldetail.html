@@ -89,8 +89,10 @@
   </div>
 </div>
 <div class="container">
-  <div class="hotel-book-detail return-hotel-detail">
-    <span class="pointer blue-dark"><i class="fa fa-chevron-left blue-dark mr5"></i> Return to results</span>
+  <div class="hotel-book-detail">
+    <div class="pt10 pr10 pb10 pl10">
+      <span class="pointer blue-dark"><i class="fa fa-chevron-left blue-dark mr5"></i> Return to results</span>
+    </div>
   </div>
   <div class="hotel-information">
     <div class="row">
@@ -122,8 +124,12 @@
               </div>
             </div>
             <div class="hotelinside-slider">
-              <flex-slider class="carousel" flex-slide="slide in hotel track by $index" direction-nav="false" control-nav="false" animation="slide" item-width="460" item-margin="5">
-                <li><img alt="" class="img-responsive" ng-src="{{slide}}"></li>
+              <flex-slider class="carousel" flex-slide="slide in hotel track by $index" direction-nav="false" control-nav="false" animation="slide">
+                <li>
+                  <div class="slider-imgholder relate">
+                    <img alt="" class="img-responsive get-center" ng-src="{{slide}}">
+                  </div>
+                </li>
               </flex-slider>
             </div>
             <div class="hotel-table">
@@ -139,52 +145,68 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a href=""><img src="img/hotelsbtn.png" alt="" class="img-responsive"></a></td>
+                    <td>
+                      <a href=""><img src="img/hotelsbtn.png" alt="" class="img-responsive"></a>
+                    </td>
                     <td>
                       <div class="">
-                      <span class="blue-dark block">Best available rate</span>
-                      <span class=""><img src="img/cup.png" alt="" class="v-top mr5">Breakfast included</span>
-                    </div>
-                  </td>
+                        <span class="blue-dark block">Best available rate</span>
+                        <span class=""><img src="img/cup.png" alt="" class="v-top mr5">Breakfast included</span>
+                      </div>
+                    </td>
                     <td><span class="blue-dark">1,004 GBP</span></td>
                     <td><span class="blue-dark">1,004 GBP</span></td>
-                    <td><button class="btn btn-blue">View deal</button></td>
+                    <td>
+                      <button class="btn btn-blue">View deal</button>
+                    </td>
                   </tr>
                   <tr>
-                    <td><a href=""><img src="img/hotelsbtn.png" alt="" class="img-responsive"></a></td>
+                    <td>
+                      <a href=""><img src="img/hotelsbtn.png" alt="" class="img-responsive"></a>
+                    </td>
                     <td>
                       <div class="">
-                      <span class="blue-dark block">Best available rate</span>
-                      <span class=""><img src="img/cup.png" alt="" class="v-top mr5">Breakfast included</span>
-                    </div>
-                  </td>
+                        <span class="blue-dark block">Best available rate</span>
+                        <span class=""><img src="img/cup.png" alt="" class="v-top mr5">Breakfast included</span>
+                      </div>
+                    </td>
                     <td><span class="blue-dark">1,004 GBP</span></td>
                     <td><span class="blue-dark">1,004 GBP</span></td>
-                    <td><button class="btn btn-blue">View deal</button></td>
+                    <td>
+                      <button class="btn btn-blue">View deal</button>
+                    </td>
                   </tr>
                   <tr>
-                    <td><a href=""><img src="img/hotelsbtn.png" alt="" class="img-responsive"></a></td>
+                    <td>
+                      <a href=""><img src="img/hotelsbtn.png" alt="" class="img-responsive"></a>
+                    </td>
                     <td>
                       <div class="">
-                      <span class="blue-dark block">Best available rate</span>
-                      <span class=""><img src="img/cup.png" alt="" class="v-top mr5">Breakfast included</span>
-                    </div>
-                  </td>
+                        <span class="blue-dark block">Best available rate</span>
+                        <span class=""><img src="img/cup.png" alt="" class="v-top mr5">Breakfast included</span>
+                      </div>
+                    </td>
                     <td><span class="blue-dark">1,004 GBP</span></td>
                     <td><span class="blue-dark">1,004 GBP</span></td>
-                    <td><button class="btn btn-blue">View deal</button></td>
+                    <td>
+                      <button class="btn btn-blue">View deal</button>
+                    </td>
                   </tr>
                   <tr>
-                    <td><a href=""><img src="img/hotelsbtn.png" alt="" class="img-responsive"></a></td>
+                    <td>
+                      <a href=""><img src="img/hotelsbtn.png" alt="" class="img-responsive"></a>
+                    </td>
                     <td>
                       <div class="">
-                      <span class="blue-dark block">Best available rate</span>
-                      <span class=""><img src="img/cup.png" alt="" class="v-top mr5">Breakfast included</span>
-                    </div>
-                  </td>
+                        <span class="blue-dark block">Best available rate</span>
+                        <span class=""><img src="img/cup.png" alt="" class="v-top mr5">Breakfast included</span>
+                      </div>
+                    </td>
                     <td><span class="blue-dark">1,004 GBP</span></td>
                     <td><span class="blue-dark">1,004 GBP</span></td>
-                    <td><button class="btn btn-blue">View deal</button></td>
+                    <td>
+                      <button class="btn btn-blue">View deal</button>
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -195,8 +217,8 @@
               <div class="col-md-offset-1 col-md-10">
                 <h4 class="blue-dark text-center font-bold mb20">“Sea views, Great location, Excellent service”</h4>
                 <p>Featuring an outdoor pool and a swimming pool, Trident Nariman Point is located in Mumbai and offers lively accommodation. It provides 5-star accommodation and views of the sea. </p>
-                <p>There are a variety of facilities on offer to guests of The Trident Nariman Point, including an express check-in and check-out feature, an executive floor and 24-hour room service. It offers babysitting services, a currency exchange and a reception
-                  that operates 24 hours a day.</p>
+                <p>There are a variety of facilities on offer to guests of The Trident Nariman Point, including an express check-in and check-out feature, an executive floor and 24-hour room service. It offers babysitting services, a currency exchange and
+                  a reception that operates 24 hours a day.</p>
                 <p>Rooms at Trident Nariman Point are spacious and feature a mini bar and movies-on-demand. Each provide bottled water, a seating area and a private bathroom with a shower.</p>
                 <p>A satisfying breakfast is prepared every morning at Trident Hotel Nariman Point, and there are numerous cafés and eateries close by.</p>
                 <p>Mumbai's well-known attractions are within close proximity to Trident Hotel Nariman Point Mumbai, with Air India Building only a short walk away. The hotel also offers parking for those travelling by car.</p>
