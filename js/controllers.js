@@ -149,6 +149,87 @@ function getDayClass(data) {
   $scope.menutitle = NavigationService.makeactive("Hotel");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
+
+  $scope.showRate = false;
+  $scope.showRating = function() {
+      $scope.showAccom = false;
+      $scope.showView = false;
+      $scope.showArea = false;
+      $scope.showChain = false;
+      $scope.showFilter = false;
+    if($scope.showRate == true){
+      $scope.showRate = false;
+    }else {
+      $scope.showRate = true;
+    }
+  };
+
+  $scope.showAccom = false;
+  $scope.accomodation = function() {
+    $scope.showRate = false;
+    $scope.showView = false;
+    $scope.showArea = false;
+    $scope.showChain = false;
+    $scope.showFilter = false;
+    if($scope.showAccom == true){
+      $scope.showAccom = false;
+    }else {
+      $scope.showAccom = true;
+    }
+  };
+  $scope.showView = false;
+  $scope.reviews = function() {
+    $scope.showRate = false;
+    $scope.showAccom = false;
+    $scope.showArea = false;
+    $scope.showChain = false;
+    $scope.showFilter = false;
+    if($scope.showView == true){
+      $scope.showView = false;
+    }else {
+      $scope.showView = true;
+    }
+  };
+  $scope.showArea = false;
+  $scope.area = function() {
+    $scope.showView = false;
+    $scope.showRate = false;
+    $scope.showAccom = false;
+    $scope.showChain = false;
+    $scope.showFilter = false;
+    if($scope.showArea == true){
+      $scope.showArea = false;
+    }else {
+      $scope.showArea = true;
+    }
+  };
+  $scope.showChain = false;
+  $scope.chain = function() {
+    $scope.showView = false;
+    $scope.showRate = false;
+    $scope.showAccom = false;
+    $scope.showArea = false;
+    $scope.showFilter = false;
+    if($scope.showChain == true){
+      $scope.showChain = false;
+    }else {
+      $scope.showChain = true;
+    }
+  };
+  $scope.showFilter = false;
+  $scope.filter = function() {
+    $scope.showView = false;
+    $scope.showRate = false;
+    $scope.showAccom = false;
+    $scope.showArea = false;
+    $scope.showChain = false;
+    if($scope.showFilter == true){
+      $scope.showFilter = false;
+    }else {
+      $scope.showFilter = true;
+    }
+  };
+
   $scope.tab2 = 'popular';
   $scope.classa = 'tab-active';
   $scope.classb = '';
