@@ -19,7 +19,7 @@ $brand-gray-light: #d6d6d6 !default;
 @mixin placeholder {
   $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
   @each $placeholder in $placeholders {
-    &:#{$placeholder}-placeholder { 
+    &:#{$placeholder}-placeholder {
       @content;
     }
   }
@@ -403,6 +403,12 @@ nav {
 }
 // header end
 // home page
+  // pop
+  .count-cur-bg {
+    background: url('../img/count-cur.jpg') no-repeat;
+    background-size: cover;
+  }
+  // pop up
 .home-slider-back {
   position: relative;
   .flexslider {

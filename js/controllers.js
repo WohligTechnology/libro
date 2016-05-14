@@ -1,6 +1,6 @@
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap','ngAnimate', 'ui-rangeSlider' , 'ngSanitize', 'angular-flexslider'])
 
-.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout,$uibModal) {
   //Used to name the .html file
 
   console.log("Testing Consoles");
@@ -15,6 +15,23 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     'img/slider2.jpg',
     'img/slider3.jpg'
   ];
+
+  $scope.openCountry = function(){
+    $uibModal.open({
+      animation: true,
+      templateUrl: 'views/modal/country.html',
+      controller: "HomeCtrl"
+    });
+  };
+
+  $scope.openCurrency = function(){
+    $uibModal.open({
+      animation: true,
+      templateUrl: 'views/modal/currency.html',
+      controller: "HomeCtrl"
+    });
+  };
+
   $scope.showPlace = false;
   $scope.viewPlace = function(){
     if($scope.showPlace == true) {
