@@ -25,7 +25,128 @@
       <div class="book-tab">
         <uib-tabset>
           <uib-tab>
-            <uib-tab-heading><i class="mr5 libro-flight"></i> Flights</uib-tab-heading>
+            <uib-tab-heading><i class="mr5 libro-flight"></i> <span class="tab-heading">Flights</span></uib-tab-heading>
+            <div class="booking-table">
+              <div class="row-flex">
+                <div class="col-flex">
+                  <div class="choose-destination bg-blue-light book-colum">
+                    <label class="font-medium" for="destination">Where would you like to stay ?</label>
+                    <textarea name="desctination" placeholder="Destination"></textarea>
+                  </div>
+                </div>
+                <div class="col-flex">
+                  <div class="row-flex">
+                    <div class="col-flex">
+                      <div class="check-in bg-blue-light book-colum">
+                        <label class="font-medium" for="checkin"><img src="img/calendar.png" alt=""> Check in</label>
+                        <!-- <input type="text" class="form-control" id="checkin" ng-click="open1();" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats"
+                          /> -->
+                        <div class="check-cal text-center">
+                          <span class="blue-dark">January</span>
+                          <h3 class="color-orange">29</h3>
+                          <span class="blue-dark">Friday</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-flex">
+                      <div class="check-out bg-blue-light book-colum">
+                        <label class="font-medium" for="checkout"><img src="img/calendar.png" alt=""> Check Out</label>
+                        <!-- <input type="text" class="form-control" ng-click="open2();" uib-datepicker-popup="{{format}}" ng-model="dr" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" /> -->
+                        <div class="check-cal text-center">
+                          <span class="blue-dark">January</span>
+                          <h3 class="color-orange">29</h3>
+                          <span class="blue-dark">Friday</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-flex">
+                  <div class="row-flex">
+                    <div class="col-flex">
+                      <div class="book-colum bg-blue-light">
+                        <label class="font-medium block" for="rooms"><img src="img/bed.png" alt=""> Rooms</label>
+                        <!-- <select name="" id="rooms">
+                            <option value="">1</option>
+                          </select> -->
+                        <div class="select-bar relate">
+                          <div class="select-colum pointer" ng-click="openSelect();">
+                            <h3 class="color-orange">1</h3>
+                          </div>
+                          <ul ng-show="showRooms">
+                            <li><a href="" class="block">1</a></li>
+                            <li><a href="" class="block">2</a></li>
+                            <li><a href="" class="block">3</a></li>
+                            <li><a href="" class="block">4</a></li>
+                            <li><a href="" class="block">5</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-flex">
+                      <div class="book-colum bg-blue-light">
+                        <label class="font-medium block" for="adults"><img src="img/couple.png" height="22" alt=""> Adults</label>
+                        <!-- <select class="">
+                            <option value="1" >1</option>
+                            <option value="2" >2</option>
+                            <option value="3" >3</option>
+                            <option value="4" >4</option>
+                          </select> -->
+                        <div class="select-bar relate">
+                          <div class="select-colum pointer" ng-click="openAdultsel();">
+                            <h3 class="color-orange">1</h3>
+                          </div>
+                          <ul ng-show="adultroom">
+                            <li><a href="" class="block">1</a></li>
+                            <li><a href="" class="block">2</a></li>
+                            <li><a href="" class="block">3</a></li>
+                            <li><a href="" class="block">4</a></li>
+                            <li><a href="" class="block">5</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-flex">
+                      <div class="book-colum bg-blue-light">
+                        <label class="block font-medium" for="children"><img src="img/single.png" alt=""> Children</label>
+                        <!-- <select name="" id="children">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                            <option value="">7</option>
+                            <option value="">8</option>
+                            <option value="">9</option>
+                            <option value="">10</option>
+                          </select> -->
+                        <div class="select-bar relate">
+                          <div class="select-colum pointer" ng-click="openChildsel();">
+                            <h3 class="color-orange">1</h3>
+                          </div>
+                          <ul ng-show="childroom">
+                            <li><a href="" class="block">1</a></li>
+                            <li><a href="" class="block">2</a></li>
+                            <li><a href="" class="block">3</a></li>
+                            <li><a href="" class="block">4</a></li>
+                            <li><a href="" class="block">5</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-flex">
+                  <div class="book-submit">
+                    <button type="submit" class="btn book-colum btn-submit"><i class="fa fa-search fa-3x color-orange"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </uib-tab>
+          <uib-tab>
+            <uib-tab-heading><i class="mr5 libro-bed"></i> <span class="tab-heading">Hotels</span></uib-tab-heading>
             <div class="booking-table">
               <form action="">
                 <div class="row-flex">
@@ -71,7 +192,7 @@
                             <option value="">1</option>
                           </select> -->
                           <div class="select-bar relate">
-                            <div class="select-colum pointer"  ng-click="openSelect();">
+                            <div class="select-colum pointer" ng-click="openSelect();">
                               <h3 class="color-orange">1</h3>
                             </div>
                             <ul ng-show="showRooms">
@@ -139,7 +260,7 @@
                     </div>
                   </div>
                   <div class="col-flex">
-                    <div class="">
+                    <div class="book-submit">
                       <button type="submit" class="btn book-colum btn-submit"><i class="fa fa-search fa-3x color-orange"></i></button>
                     </div>
                   </div>
@@ -148,139 +269,16 @@
             </div>
           </uib-tab>
           <uib-tab>
-            <uib-tab-heading><i class="mr5 libro-bed"></i> Hotels</uib-tab-heading>
-            <div class="booking-table">
-              <form action="">
-                <div class="row-flex">
-                  <div class="col-flex">
-                    <div class="choose-destination bg-blue-light book-colum">
-                      <label class="font-medium" for="destination">Where would you like to stay ?</label>
-                      <textarea name="desctination" placeholder="Destination"></textarea>
-                    </div>
-                  </div>
-                  <div class="col-flex">
-                    <div class="row-flex">
-                      <div class="col-flex">
-                        <div class="check-in bg-blue-light book-colum">
-                          <label class="font-medium" for="checkin"><img src="img/calendar.png" alt=""> Check in</label>
-                          <!-- <input type="text" class="form-control" id="checkin" ng-click="open1();" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats"
-                          /> -->
-                          <div class="check-cal text-center">
-                            <span class="blue-dark">January</span>
-                            <h3 class="color-orange">29</h3>
-                            <span class="blue-dark">Friday</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-flex">
-                        <div class="check-out bg-blue-light book-colum">
-                          <label class="font-medium" for="checkout"><img src="img/calendar.png" alt=""> Check Out</label>
-                          <!-- <input type="text" class="form-control" ng-click="open2();" uib-datepicker-popup="{{format}}" ng-model="dr" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" /> -->
-                          <div class="check-cal text-center">
-                            <span class="blue-dark">January</span>
-                            <h3 class="color-orange">29</h3>
-                            <span class="blue-dark">Friday</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-flex">
-                    <div class="row-flex">
-                      <div class="col-flex">
-                        <div class="book-colum bg-blue-light">
-                          <label class="font-medium block" for="rooms"><img src="img/bed.png" alt=""> Rooms</label>
-                          <!-- <select name="" id="rooms">
-                            <option value="">1</option>
-                          </select> -->
-                          <div class="select-bar relate">
-                            <div class="select-colum pointer"  ng-click="openSelect();">
-                              <h3 class="color-orange">1</h3>
-                            </div>
-                            <ul ng-show="showRooms">
-                              <li><a href="" class="block">1</a></li>
-                              <li><a href="" class="block">2</a></li>
-                              <li><a href="" class="block">3</a></li>
-                              <li><a href="" class="block">4</a></li>
-                              <li><a href="" class="block">5</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-flex">
-                        <div class="book-colum bg-blue-light">
-                          <label class="font-medium block" for="adults"><img src="img/couple.png" height="22" alt=""> Adults</label>
-                          <!-- <select class="">
-                            <option value="1" >1</option>
-                            <option value="2" >2</option>
-                            <option value="3" >3</option>
-                            <option value="4" >4</option>
-                          </select> -->
-                          <div class="select-bar relate">
-                            <div class="select-colum pointer" ng-click="openAdultsel();">
-                              <h3 class="color-orange">1</h3>
-                            </div>
-                            <ul ng-show="adultroom">
-                              <li><a href="" class="block">1</a></li>
-                              <li><a href="" class="block">2</a></li>
-                              <li><a href="" class="block">3</a></li>
-                              <li><a href="" class="block">4</a></li>
-                              <li><a href="" class="block">5</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-flex">
-                        <div class="book-colum bg-blue-light">
-                          <label class="block font-medium" for="children"><img src="img/single.png" alt=""> Children</label>
-                          <!-- <select name="" id="children">
-                            <option value="">1</option>
-                            <option value="">2</option>
-                            <option value="">3</option>
-                            <option value="">4</option>
-                            <option value="">5</option>
-                            <option value="">6</option>
-                            <option value="">7</option>
-                            <option value="">8</option>
-                            <option value="">9</option>
-                            <option value="">10</option>
-                          </select> -->
-                          <div class="select-bar relate">
-                            <div class="select-colum pointer" ng-click="openChildsel();">
-                              <h3 class="color-orange">1</h3>
-                            </div>
-                            <ul ng-show="childroom">
-                              <li><a href="" class="block">1</a></li>
-                              <li><a href="" class="block">2</a></li>
-                              <li><a href="" class="block">3</a></li>
-                              <li><a href="" class="block">4</a></li>
-                              <li><a href="" class="block">5</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-flex">
-                    <div class="">
-                      <button type="submit" class="btn book-colum btn-submit"><i class="fa fa-search fa-3x color-orange"></i></button>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
+            <uib-tab-heading><i class="mr5 libro-car"></i> <span class="tab-heading">Car Hire</span></uib-tab-heading>
           </uib-tab>
           <uib-tab>
-            <uib-tab-heading><i class="mr5 libro-car"></i> Car Hire</uib-tab-heading>
+            <uib-tab-heading><i class="mr5 libro-home"></i> <span class="tab-heading">Homestays</span></uib-tab-heading>
           </uib-tab>
           <uib-tab>
-            <uib-tab-heading><i class="mr5 libro-home"></i> Homestays</uib-tab-heading>
+            <uib-tab-heading><i class="mr5 libro-bus"></i> <span class="tab-heading">Tours &amp; Excursions</span></uib-tab-heading>
           </uib-tab>
           <uib-tab>
-            <uib-tab-heading><i class="mr5 libro-bus"></i> Tours &amp; Excursions</uib-tab-heading>
-          </uib-tab>
-          <uib-tab>
-            <uib-tab-heading><i class="mr5 libro-parking"></i> Parking</uib-tab-heading>
+            <uib-tab-heading><i class="mr5 libro-parking"></i> <span class="tab-heading">Parking</span></uib-tab-heading>
           </uib-tab>
         </uib-tabset>
       </div>
@@ -290,62 +288,70 @@
 <div class="popular-destination">
   <img src="img/popular-destination.png" alt="" class="img-responsive destn-tag text-center">
   <div class="container">
-    <div class="popular-places">
-      <h3 class="place-heading blue-dark">Europe</h3>
-      <div class="row-flex">
-        <div class="col-flex">
-          <div class="place relate">
-            <div class="place-imgholder"><img src="img/switerland.png" alt="" class="img-responsive"></div>
-            <div class="place-detail clearfix"><span class="name">Switzerland</span><span class="property">1001 properties</span></div>
-          </div>
-        </div>
-        <div class="col-flex">
-          <div class="place relate">
-            <div class="place-imgholder"><img src="img/spain.png" alt="" class="img-responsive"></div>
-            <div class="place-detail clearfix"><span class="name">Spain</span><span class="property">1001 properties</span></div>
-          </div>
-        </div>
-        <div class="col-flex">
-          <div class="place relate">
-            <div class="place-imgholder"><img src="img/italy.png" alt="" class="img-responsive"></div>
-            <div class="place-detail clearfix"><span class="name">Italy</span><span class="property">1001 properties</span></div>
-          </div>
-        </div>
-        <div class="col-flex">
-          <div class="place relate">
-            <div class="place-imgholder"><img src="img/France.png" alt="" class="img-responsive"></div>
-            <div class="place-detail clearfix"><span class="name">France</span><span class="property">1001 properties</span></div>
+    <div class="scroll-section">
+      <div class="overflow">
+        <div class="popular-places">
+          <h3 class="place-heading blue-dark">Europe</h3>
+          <div class="row-flex">
+            <div class="col-flex">
+              <div class="place relate" ng-click="viewPlace();">
+                <div class="place-imgholder"><img src="img/switerland.png" alt="" class="img-responsive"></div>
+                <div class="place-detail clearfix"><span class="name">Switzerland</span><span class="property">1001 properties</span></div>
+              </div>
+            </div>
+            <div class="col-flex">
+              <div class="place relate" ng-click="viewPlace();">
+                <div class="place-imgholder"><img src="img/spain.png" alt="" class="img-responsive"></div>
+                <div class="place-detail clearfix"><span class="name">Spain</span><span class="property">1001 properties</span></div>
+              </div>
+            </div>
+            <div class="col-flex">
+              <div class="place relate" ng-click="viewPlace();">
+                <div class="place-imgholder"><img src="img/italy.png" alt="" class="img-responsive"></div>
+                <div class="place-detail clearfix"><span class="name">Italy</span><span class="property">1001 properties</span></div>
+              </div>
+            </div>
+            <div class="col-flex">
+              <div class="place relate" ng-click="viewPlace();">
+                <div class="place-imgholder"><img src="img/France.png" alt="" class="img-responsive"></div>
+                <div class="place-detail clearfix"><span class="name">France</span><span class="property">1001 properties</span></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="placepopular-more bg-blue">
+  <div class="placepopular-more bg-blue" ng-show="showPlace">
     <div class="container">
-      <div class="">
-        <div class="row-flex">
-          <div class="col-flex">
-            <div class="place relate">
-              <div class="place-imgholder"><img src="img/geneva.png" alt="" class="img-responsive"></div>
-              <div class="place-detail clearfix"><span class="name">Geneva</span><span class="property">1001 properties</span></div>
-            </div>
-          </div>
-          <div class="col-flex">
-            <div class="place relate">
-              <div class="place-imgholder"><img src="img/basel.png" alt="" class="img-responsive"></div>
-              <div class="place-detail clearfix"><span class="name">Basel</span><span class="property">1001 properties</span></div>
-            </div>
-          </div>
-          <div class="col-flex">
-            <div class="place relate">
-              <div class="place-imgholder"><img src="img/zurich.png" alt="" class="img-responsive"></div>
-              <div class="place-detail clearfix"><span class="name">Zurich</span><span class="property">1001 properties</span></div>
-            </div>
-          </div>
-          <div class="col-flex">
-            <div class="place relate">
-              <div class="place-imgholder"><img src="img/lugano.png" alt="" class="img-responsive"></div>
-              <div class="place-detail clearfix"><span class="name">Lugano</span><span class="property">1001 properties</span></div>
+      <div class="scroll-section">
+        <div class="overflow">
+          <div class="popularplace-detail">
+            <div class="row-flex">
+              <div class="col-flex">
+                <div class="place relate">
+                  <div class="place-imgholder"><img src="img/geneva.png" alt="" class="img-responsive"></div>
+                  <div class="place-detail clearfix"><span class="name">Geneva</span><span class="property">1001 properties</span></div>
+                </div>
+              </div>
+              <div class="col-flex">
+                <div class="place relate">
+                  <div class="place-imgholder"><img src="img/basel.png" alt="" class="img-responsive"></div>
+                  <div class="place-detail clearfix"><span class="name">Basel</span><span class="property">1001 properties</span></div>
+                </div>
+              </div>
+              <div class="col-flex">
+                <div class="place relate">
+                  <div class="place-imgholder"><img src="img/zurich.png" alt="" class="img-responsive"></div>
+                  <div class="place-detail clearfix"><span class="name">Zurich</span><span class="property">1001 properties</span></div>
+                </div>
+              </div>
+              <div class="col-flex">
+                <div class="place relate">
+                  <div class="place-imgholder"><img src="img/lugano.png" alt="" class="img-responsive"></div>
+                  <div class="place-detail clearfix"><span class="name">Lugano</span><span class="property">1001 properties</span></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -355,31 +361,35 @@
 </div>
 <div class="popular-destination">
   <div class="container">
-    <div class="popular-places">
-      <h3 class="place-heading blue-dark">America</h3>
-      <div class="row-flex">
-        <div class="col-flex">
-          <div class="place relate">
-            <div class="place-imgholder"><img src="img/switerland.png" alt="" class="img-responsive"></div>
-            <div class="place-detail clearfix"><span class="name">Switzerland</span><span class="property">1001 properties</span></div>
-          </div>
-        </div>
-        <div class="col-flex">
-          <div class="place relate">
-            <div class="place-imgholder"><img src="img/spain.png" alt="" class="img-responsive"></div>
-            <div class="place-detail clearfix"><span class="name">Spain</span><span class="property">1001 properties</span></div>
-          </div>
-        </div>
-        <div class="col-flex">
-          <div class="place relate">
-            <div class="place-imgholder"><img src="img/italy.png" alt="" class="img-responsive"></div>
-            <div class="place-detail clearfix"><span class="name">Italy</span><span class="property">1001 properties</span></div>
-          </div>
-        </div>
-        <div class="col-flex">
-          <div class="place relate">
-            <div class="place-imgholder"><img src="img/France.png" alt="" class="img-responsive"></div>
-            <div class="place-detail clearfix"><span class="name">France</span><span class="property">1001 properties</span></div>
+    <div class="scroll-section">
+      <div class="overflow">
+        <div class="popular-places">
+          <h3 class="place-heading blue-dark">America</h3>
+          <div class="row-flex">
+            <div class="col-flex">
+              <div class="place relate">
+                <div class="place-imgholder"><img src="img/switerland.png" alt="" class="img-responsive"></div>
+                <div class="place-detail clearfix"><span class="name">Switzerland</span><span class="property">1001 properties</span></div>
+              </div>
+            </div>
+            <div class="col-flex">
+              <div class="place relate">
+                <div class="place-imgholder"><img src="img/spain.png" alt="" class="img-responsive"></div>
+                <div class="place-detail clearfix"><span class="name">Spain</span><span class="property">1001 properties</span></div>
+              </div>
+            </div>
+            <div class="col-flex">
+              <div class="place relate">
+                <div class="place-imgholder"><img src="img/italy.png" alt="" class="img-responsive"></div>
+                <div class="place-detail clearfix"><span class="name">Italy</span><span class="property">1001 properties</span></div>
+              </div>
+            </div>
+            <div class="col-flex">
+              <div class="place relate">
+                <div class="place-imgholder"><img src="img/France.png" alt="" class="img-responsive"></div>
+                <div class="place-detail clearfix"><span class="name">France</span><span class="property">1001 properties</span></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

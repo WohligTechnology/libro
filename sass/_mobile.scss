@@ -38,6 +38,17 @@
   font-size: 12px;
 }
   // hotel end
+  // home
+  .book-your-ticket .book-tab .nav-tabs > li > a { padding: 10px 0; }
+  .book-your-ticket .tab-content > .tab-pane { padding: 20px 10px; }
+  .place {
+    width: auto;
+    margin: 5px 2px;
+  }
+  .home-slider-back .flexslider { max-height: 570px; }
+  .choose-destination textarea { width: 200px; }
+  .booking-table .col-flex { margin: 0px 2px; }
+  // home end
 }
 @media (max-width: $screen-sm-max) {
   // header
@@ -66,11 +77,19 @@
     img { margin: 0px auto; }
   }
   .book-scroll {
-    overflow: scroll; 
+    overflow: scroll;
     .hotel-book-detail {
       width: 992px;
     }
   }
+  .hotel-book-detail .feature {
+    position: static;
+  }
+  .filter-dropdown {
+    width: 100%;
+    .feature-part { border: none; }
+  }
+  .cancellation { margin: 0; }
   .scroll-travel-info {
     overflow-x: scroll;
     overflow-y: hidden;
@@ -78,6 +97,45 @@
   }
   .hotel-information { padding: 10px 0px 0px; }
   // hotel end
+  // home
+  .tab-heading { display: none; }
+  .book-your-ticket .book-tab .nav > li { @include flex(auto); }
+  .book-tab .nav-tabs > li.active > a .tab-heading { display: inline-block; }
+  .place {
+    .place-detail { font-size: 11px; }
+  }
+  .place-heading { font-size: 20px; }
+  .placepopular-more { padding: 10px 0; }
+  .destn-tag {
+    width: 50%;
+    margin: 20px auto;
+  }
+  .home-slider-back .flexslider { max-height: 400px; }
+  .currency-country { top: 10px; }
+  .book-your-ticket {
+    position: static;
+    @include transform(translate(0));
+    .book-tab { background-size: cover; }
+    .book-colum {
+      margin: 0px 7px 10px;
+    }
+  }
+  .home-banner {
+    padding: 100px 0 50px;
+    background-color: #adadad;
+  }
+  .home-slider-back { display: none; }
+  .booking-table {
+    .row-flex {
+      @include flex-wrap(wrap);
+      .col-flex {
+        @include flex(auto);
+        label { display: block; }
+      }
+    }
+  }
+  .choose-destination textarea { width: 100%; }
+  // home end
 }
 @media (max-width: $screen-xs-max) {
   // header
@@ -113,6 +171,21 @@
   }
   .summary-list { padding-left: 10px; }
   // hotel end
+  // home
+  .overflow {
+    overflow-x: scroll;
+  overflow-y: hidden;
+}
+.popular-places { width: 767px; }
+.place {
+  width: 220px;
+  margin: 5px 8px;
+  .place-detail {
+    font-size: 13px;
+  }
+}
+
+  // home end
 }
 @media (max-width: 480px) {
   .no-float { float: none !important; }
@@ -179,4 +252,20 @@
 .hotel-deal li { padding: 10px 13px; }
 .summary .chart { margin: 30px auto 20px; }
   // hotel end
+  // home
+  .destn-tag {
+    width: auto;
+    margin: 10px auto;
+  }
+  .book-submit {
+    text-align: center;
+    .btn-submit {
+      min-height: auto;
+      min-width: auto;
+      width: auto;
+      padding: 15px 100px;
+      i { font-size: 25px; }
+    }
+  }
+  // home end
 }

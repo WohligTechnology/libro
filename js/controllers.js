@@ -15,6 +15,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     'img/slider2.jpg',
     'img/slider3.jpg'
   ];
+  $scope.showPlace = false;
+  $scope.viewPlace = function(){
+    if($scope.showPlace == true) {
+      $scope.showPlace = false;
+    }else {
+      $scope.showPlace = true;
+    }
+  };
   $scope.openSelect = function(){
     $scope.childroom=false;
     $scope.adultroom=false;
@@ -257,11 +265,11 @@ function getDayClass(data) {
 
   $scope.demo2 = {
       range: {
-          min: 100,
-          max: 10000,
+          min: 500,
+          max: 7000,
       },
-      minPrice: 1000,
-      maxPrice: 4000
+      minPrice: 500,
+      maxPrice: 7000
   };
   // set available range
   $scope.minPrice = 100;
