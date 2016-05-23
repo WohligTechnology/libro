@@ -1,5 +1,5 @@
 {
-  "name": "TraveLibro",
+  "name": "travelibro",
   "description": "TraveLibro",
   "main": "gulpfile.js",
   "authors": [
@@ -31,7 +31,7 @@
     "ui-router": "~0.2.15",
     "angular": "^1.5.0",
     "angular-rangeslider": "^0.0.14",
-    "fancyBox": "fancybox#^2.1.5",
+    "fancyBox": "fancybox#^2.1.5"
   },
   "devDependencies": {
     "angular-translate": "^2.11.0"
