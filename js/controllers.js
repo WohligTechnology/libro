@@ -24,6 +24,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     });
   };
 
+
+
   $scope.openCurrency = function(){
     $uibModal.open({
       animation: true,
@@ -165,7 +167,7 @@ function getDayClass(data) {
   return '';
 }
 })
-.controller('HotelCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('HotelCtrl', function($scope, TemplateService, NavigationService, $timeout,$stateParams) {
   //Used to name the .html file
 
   console.log("Testing Consoles");
@@ -175,6 +177,11 @@ function getDayClass(data) {
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
 
+  NavigationService.getHotels($stateParams.city,function(data) {
+    console.log(data);
+    $scope.hotels = data.hotels;
+  });
+
   $scope.showRate = false;
   $scope.showRating = function() {
       $scope.showAccom = false;
@@ -182,7 +189,7 @@ function getDayClass(data) {
       $scope.showArea = false;
       $scope.showChain = false;
       $scope.showFilter = false;
-    if($scope.showRate == true){
+    if($scope.showRate === true){
       $scope.showRate = false;
     }else {
       $scope.showRate = true;

@@ -615,7 +615,7 @@
         <div class="hotel-search">
           <div class="row">
             <div class="col-md-4 col-sm-3">
-              <span class="result blue-dark">Hotels Found : 7</span>
+              <span class="result blue-dark">Hotels Found : {{hotels.length}}</span>
             </div>
             <div class="col-md-8 col-sm-9">
               <div class="result-tab">
@@ -631,7 +631,7 @@
         </div>
         <div class="scroll-hotel-part" ng-if="tab2=='popular'">
           <div class="hotel-infos">
-            <div class="hotels">
+            <div class="hotels"  ng-repeat="hotel in hotels">
               <div class="row">
                 <div class="col-md-6">
                   <div class="hotel-image">
@@ -642,7 +642,7 @@
                 </div>
                 <div class="col-md-6">
                   <div class="hotel-info-detail">
-                    <h4 class="color-orange text-capitalize hotel-name">Trident nariman hotel</h4>
+                    <h4 class="color-orange text-capitalize hotel-name">{{hotel.hotel_name}}</h4>
                     <div class="rating mb10">
                       <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" state-on="'fa fa-star'" state-off="'fa fa-star-o'" aria-labelledby="default-rating"></uib-rating>
                       <span class="blue-dark ml20 distance">5.8 km to center</span>
@@ -650,175 +650,7 @@
                     <div class="hotel-rate">
                       <div class="clearfix mt5 mb5">
                         <span class="blue-dark pull-left">Best Available Rate</span>
-                        <span class="blue-dark pull-right">1,004 GBP</span>
-                      </div>
-                      <div class="clearfix mt5 mb5">
-                        <span class="pull-left"><img src="img/cup.png" alt="" class="v-top mr5">Breakfast included</span>
-                        <span class="pull-right color-orange">hotel.info</span>
-                      </div>
-                    </div>
-                    <div class="hotel-rate">
-                      <div class="clearfix mt5 mb5">
-                        <span class="blue-dark pull-left">Best Available Rate</span>
-                        <span class="blue-dark pull-right">1,004 GBP</span>
-                      </div>
-                      <div class="clearfix mt5 mb5">
-                        <span class="pull-left"><img src="img/cup.png" alt="" class="v-top mr5">Breakfast included</span>
-                        <span class="pull-right color-orange">hotel.info</span>
-                      </div>
-                    </div>
-                    <div class="hotel-rate">
-                      <div class="clearfix see-all-room">
-                        <div class="pull-left">
-                          <span class=" color-orange block">See all room options</span>
-                          <img src="img/heart.png" alt="" class=" heart" />
-                          <span class="color-orange font-bold block">Superb 9.2</span>
-                          <span class="block blue-dark">1,157 reviews</span>
-                        </div>
-                        <div class="pull-right text-right">
-                          <strike class="blue-dark font-bold">858 GBP</strike>
-                          <h4 class="mt5 mb5 color-orange font-bold">677 GBP</h4>
-                          <span class="block">201 GBP per night</span>
-                          <button class="btn btn-blue view-deal mt10 mb10" ui-sref="hoteldetail">View deal</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="hotels">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="hotel-image">
-                    <figure>
-                      <img src="img/tr.jpg" alt="hotelimage" class="img-responsive">
-                    </figure>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="hotel-info-detail">
-                    <h4 class="color-orange text-capitalize hotel-name">Trident nariman hotel</h4>
-                    <div class="rating mb10 mb10">
-                      <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" state-on="'fa fa-star'" state-off="'fa fa-star-o'" aria-labelledby="default-rating"></uib-rating>
-                      <span class="blue-dark ml20 distance">5.8 km to center</span>
-                    </div>
-                    <div class="hotel-rate">
-                      <div class="clearfix mt5 mb5">
-                        <span class="blue-dark pull-left">Best Available Rate</span>
-                        <span class="blue-dark pull-right">1,004 GBP</span>
-                      </div>
-                      <div class="clearfix mt5 mb5">
-                        <span class="pull-left"><img src="img/cup.png" alt="" class="v-top mr5">Breakfast included</span>
-                        <span class="pull-right color-orange">hotel.info</span>
-                      </div>
-                    </div>
-                    <div class="hotel-rate">
-                      <div class="clearfix mt5 mb5">
-                        <span class="blue-dark pull-left">Best Available Rate</span>
-                        <span class="blue-dark pull-right">1,004 GBP</span>
-                      </div>
-                      <div class="clearfix mt5 mb5">
-                        <span class="pull-left"><img src="img/cup.png" alt="" class="v-top mr5">Breakfast included</span>
-                        <span class="pull-right color-orange">hotel.info</span>
-                      </div>
-                    </div>
-                    <div class="hotel-rate">
-                      <div class="clearfix see-all-room">
-                        <div class="pull-left">
-                          <span class=" color-orange block">See all room options</span>
-                          <img src="img/heart.png" alt="" class=" heart" />
-                          <span class="color-orange font-bold block">Superb 9.2</span>
-                          <span class="block blue-dark">1,157 reviews</span>
-                        </div>
-                        <div class="pull-right text-right">
-                          <strike class="blue-dark font-bold">858 GBP</strike>
-                          <h4 class="mt5 mb5 color-orange font-bold">677 GBP</h4>
-                          <span class="block">201 GBP per night</span>
-                          <button class="btn btn-blue view-deal mt10 mb10" ui-sref="hoteldetail">View deal</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="hotels">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="hotel-image">
-                    <figure>
-                      <img src="img/tr.jpg" alt="hotelimage" class="img-responsive">
-                    </figure>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="hotel-info-detail">
-                    <h4 class="color-orange text-capitalize hotel-name">Trident nariman hotel</h4>
-                    <div class="rating mb10">
-                      <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" state-on="'fa fa-star'" state-off="'fa fa-star-o'" aria-labelledby="default-rating"></uib-rating>
-                      <span class="blue-dark ml20 distance">5.8 km to center</span>
-                    </div>
-                    <div class="hotel-rate">
-                      <div class="clearfix mt5 mb5">
-                        <span class="blue-dark pull-left">Best Available Rate</span>
-                        <span class="blue-dark pull-right">1,004 GBP</span>
-                      </div>
-                      <div class="clearfix mt5 mb5">
-                        <span class="pull-left"><img src="img/cup.png" alt="" class="v-top mr5">Breakfast included</span>
-                        <span class="pull-right color-orange">hotel.info</span>
-                      </div>
-                    </div>
-                    <div class="hotel-rate">
-                      <div class="clearfix mt5 mb5">
-                        <span class="blue-dark pull-left">Best Available Rate</span>
-                        <span class="blue-dark pull-right">1,004 GBP</span>
-                      </div>
-                      <div class="clearfix mt5 mb5">
-                        <span class="pull-left"><img src="img/cup.png" alt="" class="v-top mr5">Breakfast included</span>
-                        <span class="pull-right color-orange">hotel.info</span>
-                      </div>
-                    </div>
-                    <div class="hotel-rate">
-                      <div class="clearfix see-all-room">
-                        <div class="pull-left">
-                          <span class=" color-orange block">See all room options</span>
-                          <img src="img/heart.png" alt="" class=" heart" />
-                          <span class="color-orange font-bold block">Superb 9.2</span>
-                          <span class="block blue-dark">1,157 reviews</span>
-                        </div>
-                        <div class="pull-right text-right">
-                          <strike class="blue-dark font-bold">858 GBP</strike>
-                          <h4 class="mt5 mb5 color-orange font-bold">677 GBP</h4>
-                          <span class="block">201 GBP per night</span>
-                          <button class="btn btn-blue view-deal mt10 mb10" ui-sref="hoteldetail">View deal</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="hotels">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="hotel-image">
-                    <figure>
-                      <img src="img/tr.jpg" alt="hotelimage" class="img-responsive">
-                    </figure>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="hotel-info-detail">
-                    <h4 class="color-orange text-capitalize hotel-name">Trident nariman hotel</h4>
-                    <div class="rating mb10">
-                      <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" state-on="'fa fa-star'" state-off="'fa fa-star-o'" aria-labelledby="default-rating"></uib-rating>
-                      <span class="blue-dark ml20 distance">5.8 km to center</span>
-                    </div>
-                    <div class="hotel-rate">
-                      <div class="clearfix mt5 mb5">
-                        <span class="blue-dark pull-left">Best Available Rate</span>
-                        <span class="blue-dark pull-right">1,004 GBP</span>
+                        <span class="blue-dark pull-right">{{hotel.rates_from|number:2}} GBP</span>
                       </div>
                       <div class="clearfix mt5 mb5">
                         <span class="pull-left"><img src="img/cup.png" alt="" class="v-top mr5">Breakfast included</span>

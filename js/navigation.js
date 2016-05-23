@@ -1,15 +1,8 @@
-var adminURL = "";
-if(isproduction)
-{
-  adminURL =  "http://www.wohlig.co.in/demo/index.php";
-}
-else {
-  adminURL = "http://localhost/demo/index.php";
-}
+var adminURL = "http://192.168.2.11:3000/";
 
 var navigationservice = angular.module('navigationservice', [])
 
-.factory('NavigationService', function() {
+.factory('NavigationService', function($http) {
   var navigation = [
     {
     name: "pre plan your next holiday",
@@ -49,6 +42,9 @@ var navigationservice = angular.module('navigationservice', [])
 ];
 
   return {
+    getHotels: function(city,callback) {
+      $http.get(adminURL+"bookings/hotels.json?destination="+city).success(callback);
+    },
     getnav: function() {
       return navigation;
     },
