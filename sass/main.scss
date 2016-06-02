@@ -684,9 +684,9 @@ footer {
 .hotel-book-detail {
   padding: 5px 0;
   margin-top: -1px;
-  background-color: #ece5d6;
+  background-color: #174862;
   .feature {
-    padding: 10px 15px;
+    padding: 5px 15px;
     border-left: 1px solid #d3cdc1;
     position: relative;
     cursor: pointer;
@@ -702,7 +702,7 @@ footer {
   background-color: #fff;
   color: #d3cdc1;
   text-align: left;
-  @include position(absolute,44px null null 0);
+  @include position(absolute,59px null null 0);
   z-index: 1;
   ul {
     padding: 0;
@@ -769,7 +769,7 @@ footer {
   }
   .ngrs-range-slider .ngrs-attached-handles .ngrs-value > div {
     margin: 0;
-    color: $brand-blue-dark;
+    color: white;
   }
   .ngrs-range-slider .ngrs-handle {
     @include square(12px);
@@ -778,21 +778,27 @@ footer {
   }
   .ngrs-range-slider .ngrs-join {
     height: 3px;
-    background-color: #d0c8b8;
+    background-color: #fff;
     background-image: none;
+  }
+  .ngrs-range-slider .ngrs-runner:after {
+      content: '';
+      @include size(100%,1px);
+      @include position(absolute, 6px null null null);
+      background-color: #fff;
   }
 }
 .hotel-information {
   padding: 10px 14px 0 25px;
 }
-.hotel-details {
-  padding: 10px 14px 10px 10px;
-}
+// .hotel-details {
+//   padding: 10px 0px 10px 10px;
+// }
 .hotel-search {
   padding: 10px 0 0 10px;
   .list-inline > li {
     min-height: 34px;
-    padding: 0 18px 10px;
+    padding: 0 28px 10px;
     border-bottom: 2px solid #c5c5c5;
     margin-left: -1px;
   }
